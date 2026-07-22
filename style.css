@@ -44,11 +44,10 @@ button{color:inherit}
 .button.pink{background:var(--pink);border-color:var(--pink);color:#fff}
 .button.small{min-height:40px;padding:7px 15px;font-size:13px}
 .button.tiny{min-height:34px;padding:5px 12px;font-size:12px;border-width:1px}
-.eyebrow{margin-bottom:12px;color:var(--indigo);font-size:13px;font-weight:700;letter-spacing:.09em}
+.eyebrow{margin-bottom:12px;color:var(--indigo);font-size:13px;font-weight:700;letter-spacing:0}
 h1,h2,h3,h4{margin-top:0;line-height:1.43;text-wrap:balance;word-break:auto-phrase}
-.headline-line{display:inline}
-h1{margin-bottom:21px;font-size:clamp(40px,5vw,68px);font-weight:700;letter-spacing:-.035em}
-h2{margin-bottom:15px;font-size:clamp(29px,3.4vw,45px);font-weight:700;letter-spacing:-.02em}
+h1{margin-bottom:21px;font-size:62px;font-weight:700;letter-spacing:0}
+h2{margin-bottom:15px;font-size:40px;font-weight:700;letter-spacing:0}
 h3{margin-bottom:10px;font-size:22px;font-weight:700}
 h4{margin-bottom:7px;font-size:17px;font-weight:700}
 p{margin-top:0}
@@ -90,7 +89,7 @@ p{margin-top:0}
 .feature-card{position:relative}
 .feature-card .card-body{min-height:250px}
 .hand-tag{position:absolute;top:16px;left:16px;z-index:2;padding:7px 13px;border-radius:8px;background:var(--yellow);box-shadow:0 4px 12px rgba(40,40,73,.12);font-family:"Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;font-size:18px;font-weight:700;font-style:italic;transform:rotate(-4deg)}
-.number{margin-bottom:12px;color:var(--indigo);font-size:13px;font-weight:700;letter-spacing:.08em}
+.number{margin-bottom:12px;color:var(--indigo);font-size:13px;font-weight:700;letter-spacing:0}
 .story-box{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
 .story-photo{overflow:hidden;border-radius:20px;aspect-ratio:16/10;background:#eceef4}
 .story-photo img{width:100%;height:100%;object-fit:cover}
@@ -154,6 +153,7 @@ details p,details ul{margin:12px 0 0;color:var(--muted)}
 .contact-copy{flex:1}
 .contact-copy strong{display:block;font-size:20px}
 .contact-copy span{display:block;color:var(--muted);font-size:14px}
+.contact-action{flex:0 0 auto}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
 .field{display:flex;flex-direction:column;gap:6px}
 .field.full{grid-column:1/-1}
@@ -178,14 +178,16 @@ textarea{min-height:150px;resize:vertical}
   .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
   .service-card{grid-template-columns:150px 1fr}
   .line-qr{align-items:flex-start}
+  h1{font-size:48px}
+  h2{font-size:34px}
 }
 @media(max-width:680px){
   .container{width:min(calc(100% - 28px),var(--max))}.header-inner{min-height:67px}.brand img{width:62px;height:38px}.brand-name{display:none}
-  .hero{padding-top:38px}.hero-grid{gap:32px}h1{font-size:36px}.headline-line{display:block;white-space:nowrap}.lead{font-size:17px}.slides{aspect-ratio:1/1}.slider-overlay{right:14px;bottom:14px;left:14px}.slider-caption{font-size:12px;padding:10px 12px}.slider-dots{padding:7px 9px}
+  .hero{padding-top:38px}.hero-grid{gap:32px}h1{font-size:34px}.lead{font-size:17px}.slides{aspect-ratio:1/1}.slider-overlay{right:14px;bottom:14px;left:14px}.slider-caption{font-size:12px;padding:10px 12px}.slider-dots{padding:7px 9px}
   .section{padding:54px 0}.grid-2,.grid-4,.service-grid{grid-template-columns:1fr}
   .problem-card .card-body,.feature-card .card-body{min-height:auto}.service-card{grid-template-columns:1fr}.service-card .card-media{aspect-ratio:16/9}
   .story-box,.line-cta{padding:22px}.quote{font-size:18px}.teacher-block{gap:22px}.teacher-photo{max-width:330px}
-  .cta{display:block;padding:28px 23px}.footer-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+  .cta{display:block;padding:28px 23px}.footer-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-big,.contact-mid,.contact-small{align-items:flex-start;flex-direction:column}.contact-action{width:100%}
   .mobile-cta{display:flex;position:fixed;z-index:60;right:12px;bottom:12px;left:12px;gap:8px;padding:7px;border:1px solid var(--line);border-radius:999px;background:#fff;box-shadow:var(--shadow)}
   .mobile-cta .button{min-height:43px;flex:1;padding:7px 10px;font-size:13px}body{padding-bottom:76px}
 }
