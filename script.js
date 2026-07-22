@@ -2,11 +2,19 @@
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.nav');
 if (menuButton && nav) {
+  const closeMenu = () => {
+    nav.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'メニューを開く');
+  };
+
   menuButton.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     menuButton.setAttribute('aria-expanded', String(isOpen));
     menuButton.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
   });
+
+  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
 }
 
 const slider = document.querySelector('[data-slider]');
