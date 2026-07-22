@@ -8,8 +8,11 @@
 - サーバー側処理や複雑なフレームワークは、必要性が明確になるまで導入しない
 
 ## デザイン
-- font-weightは最大700
-- 800、900、Black、ExtraBoldは禁止
+- 日本語・欧文ともにGen Interface JPを使用する
+- font-weightは400（Regular）のみ使用する
+- Medium、SemiBold、Bold、ExtraBold、Blackは禁止
+- UIに使用する色は、紺 #45489a、グリーン #19a839、グレー #c9caca、ホワイト #ffffff の4色のみとする
+- rgba、hsla、opacity、transparent、アルファ値付きカラーなどの透明度表現は禁止
 - 日本語の途中に不自然な強制改行を入れない
 - PCとスマートフォンの両方へ対応する
 - カード全体をリンクにしない
