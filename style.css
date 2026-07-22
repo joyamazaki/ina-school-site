@@ -30,6 +30,7 @@ button{color:inherit}
 .header-inner{min-height:76px;display:flex;align-items:center;gap:24px}
 .brand{display:flex;align-items:center;gap:12px;min-width:max-content;font-weight:700;color:var(--indigo)}
 .brand img{width:76px;height:46px;object-fit:contain;border-radius:10px;background:#fff}
+.header-inner .brand img{width:230px;height:auto;max-height:48px;border-radius:0;background:transparent}
 .brand-name{font-size:15px;line-height:1.35}
 .nav{margin-left:auto;display:flex;align-items:center;gap:22px;font-size:14px;font-weight:600}
 .nav a:hover{color:var(--indigo)}
@@ -220,7 +221,7 @@ textarea{min-height:150px;resize:vertical}
   .home .slider-overlay{right:20px;bottom:20px;left:20px}
 }
 @media(max-width:680px){
-  .container{width:min(calc(100% - 28px),var(--max))}.header-inner{min-height:67px}.brand img{width:62px;height:38px}.brand-name{display:none}
+  .container{width:min(calc(100% - 28px),var(--max))}.header-inner{min-height:67px}.brand img{width:62px;height:38px}.header-inner .brand img{width:min(58vw,205px);height:auto;max-height:42px}.brand-name{display:none}
   .hero{padding-top:38px}.hero-grid{gap:32px}h1{font-size:34px}.lead{font-size:17px}.slides{aspect-ratio:1/1}.slider-overlay{right:14px;bottom:14px;left:14px}.slider-caption{font-size:12px;padding:10px 12px}.slider-dots{padding:7px 9px}
   .section{padding:54px 0}.grid-2,.grid-4,.service-grid{grid-template-columns:1fr}
   .problem-card .card-body,.feature-card .card-body{min-height:auto}.service-card{grid-template-columns:1fr}.service-card .card-media{aspect-ratio:16/9}
