@@ -23,5 +23,5 @@
 連絡先
 - LINE: https://lin.ee/6t2VMWp
 - LINE ID: @869srjfq
-- Email: nagigue73@gmail.com
+- Email: i.na.yamazakinami.26@gmail.com
 - Phone: 090-6180-6981

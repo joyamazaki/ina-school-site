@@ -8,7 +8,8 @@
 - サーバー側処理や複雑なフレームワークは、必要性が明確になるまで導入しない
 
 ## デザイン
-- 日本語・欧文ともにGen Interface JPを使用する
+- 日本語と通常の文章はGen Interface JPを使用する
+- POINTなどの欧文小見出し・ラベルと料金表示のみFutura Regularを使用する
 - font-weightは400（Regular）のみ使用する
 - Medium、SemiBold、Bold、ExtraBold、Blackは禁止
 - UIに使用する色は、紺 #45489a、グリーン #19a839、グレー #efefef、ホワイト #ffffff の4色のみとする
@@ -52,7 +53,7 @@
 ## 連絡先
 - LINE URL: https://lin.ee/6t2VMWp
 - LINE ID: @869srjfq
-- メール: nagigue73@gmail.com
+- メール: i.na.yamazakinami.26@gmail.com
 - 電話: 09061806981
 - 電話受付: 平日10:00〜17:00
 
