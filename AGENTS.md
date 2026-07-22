@@ -9,9 +9,10 @@
 
 ## デザイン
 - 日本語と通常の文章はGen Interface JPを使用する
-- POINTなどの欧文小見出し・ラベルと料金表示のみFutura Regularを使用する
-- font-weightは400（Regular）のみ使用する
-- Medium、SemiBold、Bold、ExtraBold、Blackは禁止
+- POINTなどの欧文小見出し・ラベルと料金数字のみ無印のFutura Mediumを使用する
+- Futuraを使用する要素はfont-weight 500・font-style normal、日本語と通常の文章はfont-weight 400を使用する
+- 料金表示の「円」だけGen Interface JP Medium（font-weight 500）を使用する
+- 上記以外のfont-weightは使用しない
 - UIに使用する色は、紺 #45489a、グリーン #19a839、グレー #efefef、ホワイト #ffffff の4色のみとする
 - 横長ロゴ（assets/logo-horizontal.svg）は支給された元データをそのまま使用し、色、形状、グラデーションを改変しない
 - 横長ロゴ内の色とグラデーションは、UIの4色ルールおよび透明度ルールの対象外とする
