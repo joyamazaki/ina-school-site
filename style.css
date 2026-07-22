@@ -345,12 +345,12 @@ textarea{min-height:150px;resize:vertical}
   .footer-grid{grid-template-columns:1fr}
   .site-footer .footer-brand img{width:min(68vw,260px);height:auto;max-height:58px}
   .mobile-cta{display:flex;position:fixed;z-index:60;bottom:calc(12px + env(safe-area-inset-bottom));left:12px;align-items:flex-start;gap:8px}
-  .mobile-cta-link{display:block;width:80px;color:var(--white);text-decoration:none}
-  .mobile-cta-icon{display:flex;width:80px;aspect-ratio:1;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:1px solid var(--white);border-radius:50%;background:var(--navy)}
+  .mobile-cta-link{display:block;width:74px;color:var(--white);text-decoration:none}
+  .mobile-cta-icon{display:flex;width:74px;aspect-ratio:1;flex-direction:column;align-items:center;justify-content:center;gap:0;border:1px solid var(--white);border-radius:50%;background:var(--navy)}
   .mobile-cta-link.line .mobile-cta-icon{background:var(--green)}
-  .mobile-cta-icon svg{width:22px;height:22px;color:var(--white)}
+  .mobile-cta-icon svg{width:18px;height:18px;color:var(--white)}
   .mobile-cta-label{color:var(--white);font-size:var(--text-size);line-height:1.05;text-align:center;white-space:nowrap}
-  body{padding-bottom:100px}
+  body{padding-bottom:94px}
 }
 
 @media(max-width:359px){
