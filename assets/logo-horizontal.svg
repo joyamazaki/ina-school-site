@@ -14,7 +14,7 @@
       }
 
       .cls-3 {
-        fill: #ffffff;
+        fill: #fff;
       }
 
       .cls-4 {
@@ -22,21 +22,21 @@
       }
     </style>
     <linearGradient id="_ピーマン_2" data-name="ピーマン 2" x1="95.38" y1="29.65" x2="-64.31" y2="29.65" gradientUnits="userSpaceOnUse">
-      <stop offset=".02" stop-color="#19a839"/>
-      <stop offset=".09" stop-color="#19a839"/>
-      <stop offset=".22" stop-color="#19a839"/>
-      <stop offset=".28" stop-color="#19a839"/>
-      <stop offset=".45" stop-color="#19a839"/>
-      <stop offset=".51" stop-color="#19a839"/>
-      <stop offset=".62" stop-color="#19a839"/>
-      <stop offset=".64" stop-color="#19a839"/>
-      <stop offset=".68" stop-color="#19a839"/>
-      <stop offset=".72" stop-color="#19a839"/>
-      <stop offset=".76" stop-color="#19a839"/>
-      <stop offset=".81" stop-color="#19a839"/>
-      <stop offset=".85" stop-color="#19a839"/>
-      <stop offset=".91" stop-color="#19a839"/>
-      <stop offset=".98" stop-color="#19a839"/>
+      <stop offset=".02" stop-color="#26953a"/>
+      <stop offset=".09" stop-color="#3e9f3b"/>
+      <stop offset=".22" stop-color="#7bbb40"/>
+      <stop offset=".28" stop-color="#99c843"/>
+      <stop offset=".45" stop-color="#8dc44a"/>
+      <stop offset=".51" stop-color="#a5ce62"/>
+      <stop offset=".62" stop-color="#dbe798"/>
+      <stop offset=".64" stop-color="#c1db8a"/>
+      <stop offset=".68" stop-color="#98c875"/>
+      <stop offset=".72" stop-color="#75b863"/>
+      <stop offset=".76" stop-color="#58ab54"/>
+      <stop offset=".81" stop-color="#42a148"/>
+      <stop offset=".85" stop-color="#329a40"/>
+      <stop offset=".91" stop-color="#28963b"/>
+      <stop offset=".98" stop-color="#26953a"/>
     </linearGradient>
   </defs>
   <g>

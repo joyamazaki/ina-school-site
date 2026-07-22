@@ -6,16 +6,28 @@
 <title>勉強嫌いを変える個別指導｜個別指導イーナ</title>
 <meta name="description" content="なみ先生が、お子さまの学力や特性に合わせて対話型の個別指導を行います。駒込、笹塚、オンラインに対応。">
 <link rel="icon" href="assets/logo.webp">
-<link rel="stylesheet" href="style.css?v=20260722-2">
+<link rel="stylesheet" href="style.css?v=20260722-4">
 </head>
 <body class="home">
+
+<svg class="icon-library" aria-hidden="true">
+  <symbol id="icon-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.6 2.6L16.5 9"></path></symbol>
+  <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3v-7a4 4 0 0 1-1-2.6V7a4 4 0 0 1 4-4h11a4 4 0 0 1 4 4Z"></path><path d="M8 9h8M8 13h5"></path></symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24"><path d="M3 4h6a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H3Z"></path><path d="M21 4h-6a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h6Z"></path></symbol>
+  <symbol id="icon-file" viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6Z"></path><path d="M14 2v5h5M9 12h6M9 16h6"></path></symbol>
+  <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8"></path><path d="M5 10v11h14V10M9 21v-7h6v7"></path></symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2"></circle><path d="M3 21v-2a6 6 0 0 1 12 0v2M15 15a4 4 0 0 1 6 3.5V20"></path></symbol>
+  <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M7 3v4M17 3v4M3 10h18M8 14h3M13 14h3M8 17h3"></path></symbol>
+  <symbol id="icon-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></symbol>
+  <symbol id="icon-map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+</svg>
 
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html" aria-label="個別指導イーナ トップへ">
       <img src="assets/logo-horizontal.svg" alt="個別指導イーナ">
     </a>
-    <button class="menu-button" type="button" aria-label="メニューを開く">☰</button>
+    <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">☰</button>
     <nav class="nav" aria-label="メインナビゲーション">
       <a href="index.html#features">個別指導</a>
       <a href="index.html#classrooms">教室・オンライン</a>
@@ -27,143 +39,147 @@
   </div>
 </header>
 
-
 <main>
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <h1>勉強嫌いを変える個別指導</h1>
-      <p class="lead">「勉強が苦手」じゃなくて、まだ合う学び方に出会っていないだけ。お子さまの学力、特性、理解の仕方に合わせて、対話しながら学習方法を組み立てます。</p>
-      <div class="hero-actions">
-        <a class="button line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z" fill="currentColor"/><path d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z" fill="#ffffff"/></svg>LINEで無料相談</a>
-        <a class="button" href="contact.html">相談方法を見る</a>
+<section class="home-hero">
+  <div class="hero-slider" data-slider aria-label="授業風景スライダー">
+    <div class="slides">
+      <figure class="slide active" data-caption="一人ひとりの「できた」を、次の一歩へ"><picture><source media="(max-width:680px)" srcset="assets/home-hero-1-mobile.webp"><source media="(min-width:681px)" srcset="assets/home-hero-1-desktop.webp"><img src="assets/home-hero-1-desktop.webp" alt="なみ先生と教材を手にしたお子さまたち"></picture></figure>
+      <figure class="slide" data-caption="会話と手元を見ながら、理解を確かめる授業"><picture><source media="(max-width:680px)" srcset="assets/home-hero-2-mobile.webp"><source media="(min-width:681px)" srcset="assets/home-hero-2-desktop.webp"><img src="assets/home-hero-2-desktop.webp" alt="なみ先生がお子さまたちに個別指導をしている様子"></picture></figure>
+      <figure class="slide" data-caption="目標に向かう気持ちも、一緒に育てます"><picture><source media="(max-width:680px)" srcset="assets/home-hero-3-mobile.webp"><source media="(min-width:681px)" srcset="assets/home-hero-3-desktop.webp"><img src="assets/home-hero-3-desktop.webp" alt="教材を手にして笑顔を見せるなみ先生とお子さま"></picture></figure>
+    </div>
+    <div class="slider-meta container">
+      <p class="slider-caption" data-slider-caption>一人ひとりの「できた」を、次の一歩へ</p>
+      <div class="slider-dots" aria-label="写真を選択">
+        <button class="slider-dot active" type="button" aria-label="1枚目"></button>
+        <button class="slider-dot" type="button" aria-label="2枚目"></button>
+        <button class="slider-dot" type="button" aria-label="3枚目"></button>
       </div>
     </div>
-    <div class="slider" data-slider aria-label="教室紹介スライダー">
-      <div class="slides">
-        <figure class="slide active"><picture><source media="(max-width:680px)" srcset="assets/hero-mobile-1.webp"><source media="(min-width:681px)" srcset="assets/hero-desktop-1.webp"><img src="assets/hero-desktop-1.webp" alt="講師とお子さまの対面授業"></picture></figure>
-        <figure class="slide"><picture><source media="(max-width:680px)" srcset="assets/hero-mobile-2.webp"><source media="(min-width:681px)" srcset="assets/hero-desktop-2.webp"><img src="assets/hero-desktop-2.webp" alt="個別指導イーナのロゴ"></picture></figure>
-        <figure class="slide"><picture><source media="(max-width:680px)" srcset="assets/hero-mobile-3.webp"><source media="(min-width:681px)" srcset="assets/hero-desktop-3.webp"><img src="assets/hero-desktop-3.webp" alt="手書きの授業報告書"></picture></figure>
-      </div>
-      <div class="slider-overlay">
-        <div class="slider-caption" data-slider-caption>お子さまと会話しながら進める対面授業</div>
-        <div class="slider-dots" aria-label="スライドを選択">
-          <button class="slider-dot active" type="button" aria-label="1枚目"></button>
-          <button class="slider-dot" type="button" aria-label="2枚目"></button>
-          <button class="slider-dot" type="button" aria-label="3枚目"></button>
-        </div>
-      </div>
+  </div>
+  <div class="container hero-copy">
+    <h1>勉強嫌いを変える個別指導</h1>
+    <p class="lead">「勉強が苦手」じゃなくて、まだ合う学び方に出会っていないだけ。お子さまの理解の仕方に合わせて、対話しながら学習方法を組み立てます。</p>
+    <div class="hero-actions">
+      <a class="button line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z" fill="currentColor"/><path d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z" fill="#ffffff"/></svg>LINEで無料相談</a>
+      <a class="button" href="#classrooms">教室・オンライン</a>
     </div>
   </div>
 </section>
 
-<section class="section alt">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">CONCERNS</div><h2>このようなお悩みはありませんか</h2></div>
-    <div class="grid-4">
-      <article class="card problem-card"><div class="card-media"><img src="assets/problem-group.webp" alt="複数人で学ぶ教室の様子"></div><div class="card-body"><h3>集団授業では質問しにくい</h3><p>周囲を気にせず、分からないところから確認したい。</p></div></article>
-      <article class="card problem-card"><div class="card-media"><img src="assets/problem-understanding.webp" alt="講師がお子さまに説明している様子"></div><div class="card-body"><h3>理解するまでに時間がかかる</h3><p>説明の仕方や進度を、お子さまに合わせてほしい。</p></div></article>
-      <article class="card problem-card"><div class="card-media"><img src="assets/problem-homework.webp" alt="手書きの授業報告書"></div><div class="card-body"><h3>集中や宿題の進め方に困る</h3><p>授業外の学習も、無理のない形で整えたい。</p></div></article>
-      <article class="card problem-card"><div class="card-media"><img src="assets/problem-online.webp" alt="タブレットを使った学習画面"></div><div class="card-body"><h3>通塾せず自宅で学びたい</h3><p>会話をしながら、理解度を確認するオンライン授業です。</p></div></article>
+<section class="section section-gray">
+  <div class="container split-feature">
+    <div class="section-photo concerns-photo"><img src="assets/home-concerns.webp" alt="なみ先生と教材を手にしたお子さまたち"></div>
+    <div>
+      <div class="section-head"><div class="eyebrow">CONCERNS</div><h2>こんな学習の困りごと、ご相談ください</h2></div>
+      <ul class="concern-list">
+        <li><svg class="list-icon" aria-hidden="true"><use href="#icon-check"></use></svg><span>集団授業では質問しにくい</span></li>
+        <li><svg class="list-icon" aria-hidden="true"><use href="#icon-check"></use></svg><span>理解するまでに時間がかかる</span></li>
+        <li><svg class="list-icon" aria-hidden="true"><use href="#icon-check"></use></svg><span>集中や宿題の進め方に困っている</span></li>
+        <li><svg class="list-icon" aria-hidden="true"><use href="#icon-check"></use></svg><span>通塾せず、自宅から学びたい</span></li>
+      </ul>
+      <p class="section-note">診断の有無にかかわらずご相談いただけます。ノートやテスト、学校の先生のコメント、体験授業での様子をもとに、お子さまに合う進め方を考えます。</p>
     </div>
   </div>
 </section>
 
 <section class="section" id="features">
   <div class="container">
-    <div class="section-head"><div class="eyebrow">PERSONAL LEARNING</div><h2>イーナの個性別指導</h2><p>一律の進め方ではなく、お子さまの様子を確かめながら授業内容を調整します。</p></div>
-    <div class="grid-3">
-      <article class="card feature-card"><div class="card-media"><span class="hand-tag">対話</span><img src="assets/feature-dialogue.webp" alt="つきっきりで会話しながら進める授業"></div><div class="card-body"><div class="number">POINT 1</div><h3>つきっきりの対話型指導</h3><p>会話をしながら理解度を確認し、分からない部分は説明方法を変えて進めます。</p></div></article>
-      <article class="card feature-card"><div class="card-media placeholder" data-label="講習会提案書の写真に差し替え予定"><span class="hand-tag">個性</span><img src="assets/feature-plan-placeholder.webp" alt="講習会提案書の写真を配置する予定の枠"></div><div class="card-body"><div class="number">POINT 2</div><h3>個性に合わせた学習設計</h3><p>教材の難易度、予習と復習の配分、進度、宿題量をお子さまごとに調整します。</p></div></article>
-      <article class="card feature-card"><div class="card-media"><span class="hand-tag">目標</span><img src="assets/feature-goal.webp" alt="目標設定と振り返りに使う授業報告書"></div><div class="card-body"><div class="number">POINT 3</div><h3>目標設定と振り返り</h3><p>授業報告と小さな目標設定を通じて、学習の積み重ねを支えます。</p><p class="small-note">対面授業では、集中、宿題への取り組み、テスト目標の達成などをシールで可視化しています。シールを集めてもらえる小さなプレゼントも、継続のきっかけになっています。</p></div></article>
+    <div class="section-head centered"><div class="eyebrow">PERSONAL LEARNING</div><h2>合う学び方を、一緒につくる</h2><p>一律の進め方ではなく、お子さまの反応を確かめながら授業を調整します。</p></div>
+    <div class="feature-list">
+      <article class="feature-item">
+        <div class="feature-image"><img src="assets/home-feature-dialogue.webp" alt="なみ先生がお子さまの教材を示しながら説明する様子"></div>
+        <div class="feature-copy"><div class="number">POINT 1</div><h3>対話で理解を確かめる</h3><p>会話と手元を見ながら理解度を確認し、分からない部分は説明方法を変えて進めます。</p></div>
+      </article>
+      <article class="feature-item reverse">
+        <div class="feature-image"><img src="assets/home-feature-plan.webp" alt="教材を使いながら学習を進めるなみ先生とお子さま"></div>
+        <div class="feature-copy"><div class="number">POINT 2</div><h3>その日に合わせて組み立てる</h3><p>教材の難易度、予習と復習の配分、進度、宿題量を、お子さまの様子に合わせて調整します。</p></div>
+      </article>
+      <article class="feature-item">
+        <div class="feature-image report-image"><img src="assets/home-feature-report.webp" alt="授業内容と理解度を記録した授業報告書"></div>
+        <div class="feature-copy"><div class="number">POINT 3</div><h3>授業のあとまで共有する</h3><p>毎回の授業内容、理解度、次の課題を授業報告書で保護者さまへ共有します。</p></div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section alt">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">VOICE</div><h2>お子さまの体験談</h2><p>実際のお子さまや保護者さまの声を掲載するための枠です。</p></div>
-    <div class="story-box">
-      <div class="story-photo"><img src="assets/testimonial-placeholder.webp" alt="お子さまの体験談写真を配置する予定の枠"></div>
-      <div><p class="quote">「前よりも、分からないことを自分から聞けるようになりました」</p><p class="small-note">体験談本文、学年、掲載許可を確認した写真へ差し替えます。</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="classrooms">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">CLASSROOMS</div><h2>授業形態・教室</h2><p>通常期間は、対面授業とオンライン授業を開講しています。</p></div>
-    <div class="school-grid">
-      <article class="school-card"><div class="number">KOMAGOME</div><h3>駒込hahaco校</h3><div class="meta"><span class="tag">火曜日</span><span class="tag">木曜日</span></div><p>文京区駒込の親子カフェhahacoで行う対面授業です。</p><div class="map-wrap"><iframe title="駒込hahaco校 地図" loading="lazy" src="https://www.google.com/maps?q=%E3%82%AB%E3%83%95%E3%82%A7hahaco%20%E9%A7%92%E8%BE%BC&output=embed"></iframe></div></article>
-      <article class="school-card"><div class="number">SASAZUKA</div><h3>笹塚校</h3><div class="meta"><span class="tag">講習会対面授業</span></div><p>渋谷区笹塚2-21-2。部屋番号はお申し込み後に個別にご案内します。</p><div class="map-wrap"><iframe title="笹塚校 地図" loading="lazy" src="https://www.google.com/maps?q=%E3%83%95%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B9%E3%83%91%E3%83%AC%E3%82%B9%E7%AC%B9%E5%A1%9A&output=embed"></iframe></div></article>
-      <article class="school-card"><div class="number">ONLINE</div><h3>オンライン校</h3><div class="meta"><span class="tag">月</span><span class="tag">水</span><span class="tag">金</span><span class="tag">土</span><span class="tag">日</span></div><p>会話をしながら理解度を確認するオンライン個別指導です。自宅から受講できます。</p><div class="card-media" style="margin-top:16px;border-radius:16px"><img src="assets/problem-online.webp" alt="オンライン授業の学習画面"></div></article>
-    </div>
-    <div class="notice">学校の休業期間は、通常時間割に加えて、昼間から受講できる講習会時間割を開講します。講習会期間は、駒込で無料自習会も実施します。</div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">SERVICES</div><h2>基本サービス</h2><p>授業だけでなく、家庭学習と保護者さまへの共有まで継続して支えます。</p></div>
-    <div class="service-grid">
-      <article class="service-card"><div class="card-media placeholder" data-label="カリキュラム画像予定"><img src="assets/service-placeholder-1.webp" alt="オーダーメイドカリキュラムの画像予定枠"></div><div class="card-body"><h3>オーダーメイドカリキュラム</h3><p>目標と理解度に合わせて、教材の難易度、予習と復習の配分、進度を調整します。</p></div></article>
-      <article class="service-card"><div class="card-media placeholder" data-label="授業報告書画像予定"><img src="assets/service-placeholder-2.webp" alt="授業報告書の画像予定枠"></div><div class="card-body"><h3>授業報告書</h3><p>毎回の授業内容、理解度、次の課題を保護者さまへ共有します。</p></div></article>
-      <article class="service-card"><div class="card-media placeholder" data-label="家庭学習画像予定"><img src="assets/service-placeholder-3.webp" alt="家庭学習サポートの画像予定枠"></div><div class="card-body"><h3>家庭学習サポート</h3><p>宿題を日割りでお出しします。量と内容は、保護者さま、お子さまと細かく相談して決めます。</p></div></article>
-      <article class="service-card"><div class="card-media placeholder" data-label="保護者面談画像予定"><img src="assets/service-placeholder-4.webp" alt="保護者面談の画像予定枠"></div><div class="card-body"><h3>保護者面談（無料）</h3><p>最低年3回、受験を控えるお子さまは必要に応じて行います。対面、オンライン、電話、LINEに対応します。</p><p class="small-note">対面面談の場合はワンドリンクをご負担ください。</p></div></article>
+<section class="section section-gray" id="classrooms">
+  <div class="container classroom-layout">
+    <div class="classroom-photo"><img src="assets/home-classroom.webp" alt="教室でなみ先生がお子さまに個別指導をしている様子"></div>
+    <div>
+      <div class="section-head"><div class="eyebrow">CLASSROOMS</div><h2>通いやすい形で続けられます</h2><p>対面授業とオンライン授業から、ご家庭に合う形を選べます。</p></div>
+      <div class="location-list">
+        <article class="location-panel"><svg class="panel-icon" aria-hidden="true"><use href="#icon-map"></use></svg><div><div class="number">KOMAGOME</div><h3>駒込hahaco校</h3><p>火曜日・木曜日に開講する対面授業です。</p></div></article>
+        <article class="location-panel"><svg class="panel-icon" aria-hidden="true"><use href="#icon-calendar"></use></svg><div><div class="number">SASAZUKA</div><h3>笹塚校</h3><p>学校の休業期間を中心に、講習会対面授業を行います。</p></div></article>
+        <article class="location-panel"><svg class="panel-icon" aria-hidden="true"><use href="#icon-monitor"></use></svg><div><div class="number">ONLINE</div><h3>オンライン校</h3><p>月曜日・水曜日・金曜日・土曜日・日曜日に、自宅から受講できます。</p></div></article>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">CONSULTATION</div><h2>相談・体験から始められます</h2></div>
-    <div class="grid-3">
-      <article class="card"><div class="card-body"><h3>無料学習相談</h3><div class="price">0円</div><p>電話またはLINEで、現在のお困りごとを伺います。</p></div></article>
-      <article class="card"><div class="card-body"><h3>有料学習相談</h3><div class="price">3,000円</div><p>対面またはオンラインで、学習状況や今後の方針を詳しく整理します。90分程度です。</p><p class="small-note">対面の場合はワンドリンクをご負担ください。</p></div></article>
-      <article class="card"><div class="card-body"><h3>体験授業</h3><div class="price">4,000円</div><p>1コマあたり。実際の授業を行い、今後の学習プランをご提案します。</p><p class="small-note">諸経費・教材費込みです。</p></div></article>
+  <div class="container service-layout">
+    <div class="section-head"><div class="eyebrow">SERVICES</div><h2>授業と家庭学習をつなぐ基本サービス</h2><p>授業だけで終わらず、日々の学習と保護者さまへの共有まで支えます。</p></div>
+    <div class="service-list">
+      <article class="service-item"><svg class="service-icon" aria-hidden="true"><use href="#icon-book"></use></svg><div><h3>オーダーメイドカリキュラム</h3><p>目標と理解度に合わせて、教材や進度を調整します。</p></div></article>
+      <article class="service-item"><svg class="service-icon" aria-hidden="true"><use href="#icon-file"></use></svg><div><h3>授業報告書</h3><p>授業内容、理解度、次の課題を毎回共有します。</p></div></article>
+      <article class="service-item"><svg class="service-icon" aria-hidden="true"><use href="#icon-home"></use></svg><div><h3>家庭学習サポート</h3><p>宿題の量と内容を相談し、無理のない形で日割りにします。</p></div></article>
+      <article class="service-item"><svg class="service-icon" aria-hidden="true"><use href="#icon-users"></use></svg><div><h3>保護者面談（無料）</h3><p>最低年3回、対面・オンライン・電話・LINEで行います。</p></div></article>
     </div>
-    <div class="course-note"><strong>講習会（外部の方）4,000円／1コマ</strong>　学校の休業期間などに、複数回の単発授業も承ります。例：文章題の苦手克服、読書感想文講座、漢検・英検対策。教材費込みです。</div>
-    <div class="hero-actions"><a class="button line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z" fill="currentColor"/><path d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z" fill="#ffffff"/></svg>LINEで相談する</a><a class="button" href="contact.html">申込方法を見る</a></div>
   </div>
 </section>
 
-<section class="section alt">
+<section class="section section-gray">
   <div class="container">
-    <div class="section-head"><div class="eyebrow">SUPPORT</div><h2>続けやすい制度とイベント</h2></div>
-    <div class="systems-grid">
-      <article class="system-card featured"><h3>無料振替制度</h3><p>学校行事や急な体調不良の場合、授業開始2時間前までに保護者さまからお申し出いただければ、無料で別日に振り替えられます。</p><p class="small-note">振替は対面授業の空きコマ、またはオンライン授業でご案内します。振替授業の再振替はできません。概ね2か月以内にお振り替えください。</p></article>
-      <article class="system-card"><h3>ご紹介制度</h3><p>ご紹介によるご入会の場合、ご紹介者さまへ10,000円分の追加授業受講券を進呈し、ご入会者さまは入会金無料となります。</p><p class="small-note">ご申告制です。適用条件はお問い合わせください。</p></article>
-      <article class="system-card"><h3>受験関連イベント</h3><p>受験情報に関する講座やアート教室を定期的に行っています。</p><p class="small-note">例：「どうする？！中学受験（検）塾選び・志望校選び講座」「テクスチャーアート教室」</p></article>
+    <div class="section-head centered"><div class="eyebrow">CONSULTATION</div><h2>相談・体験から始められます</h2><p>まずはLINEで、現在のお困りごとをお聞かせください。</p></div>
+    <div class="consultation-grid">
+      <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true"><use href="#icon-chat"></use></svg><h3>無料学習相談</h3><p class="consult-price">0円</p><p>電話またはLINEで、現在の状況を伺います。</p></article>
+      <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true"><use href="#icon-users"></use></svg><h3>有料学習相談</h3><p class="consult-price">3,000円</p><p>対面またはオンラインで、学習の方針を整理します。</p></article>
+      <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true"><use href="#icon-book"></use></svg><h3>体験授業</h3><p class="consult-price">4,000円</p><p>実際に授業を行い、今後の学習プランをご提案します。</p></article>
     </div>
-    <div class="event-card" style="margin-top:20px"><div class="card-media"><img src="assets/event.webp" alt="受験関連講座の開催風景"></div><div class="card-body"><h3>学習とアートを通じたイベント</h3><p>受験情報だけでなく、お子さまが手を動かしながら学べる企画も行っています。開催情報はLINEやInstagramでご案内します。</p></div></div>
+    <div class="center-actions"><a class="button line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener">LINEで相談する</a><a class="text-link" href="pricing.html">料金の概要を見る</a></div>
   </div>
 </section>
 
 <section class="section">
+  <div class="container event-layout">
+    <div class="event-photo"><img src="assets/home-event.webp" alt="保護者さま向け受験講座の開催風景"></div>
+    <div>
+      <div class="section-head"><div class="eyebrow">SUPPORT</div><h2>続けやすさと、学びの機会を</h2></div>
+      <div class="support-list">
+        <article><svg class="list-icon" aria-hidden="true"><use href="#icon-calendar"></use></svg><div><h3>無料振替制度</h3><p>学校行事や急な体調不良のときは、条件の範囲内で別日に振り替えられます。</p></div></article>
+        <article><svg class="list-icon" aria-hidden="true"><use href="#icon-users"></use></svg><div><h3>ご紹介制度</h3><p>ご紹介者さまとご入会者さま、それぞれに特典をご用意しています。</p></div></article>
+        <article><svg class="list-icon" aria-hidden="true"><use href="#icon-book"></use></svg><div><h3>受験講座・アート教室</h3><p>保護者さま向けの受験情報講座や、お子さま向けのアート教室を行います。</p></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
   <div class="container teacher-block">
-    <div class="teacher-photo"><img src="assets/teacher.webp" alt="講師 なみ先生"></div>
-    <div><div class="eyebrow">TEACHER</div><h2>なみ先生</h2><p class="lead">大手個別学習塾の元教室長。保護者個人面談を多数実施し、中学受験・高校受験を控えるお子さまを中心に、一人ひとりに合う学び方を提案してきました。</p><p>個別指導とアートの経験を生かし、説明方法や教材を一つに決めつけず、お子さまの「分かる」を積み重ねます。</p></div>
+    <div class="teacher-photo"><img src="assets/home-hero-3-mobile.webp" alt="講師のなみ先生とお子さま"></div>
+    <div><div class="eyebrow">TEACHER</div><h2>なみ先生</h2><p class="lead">大手個別学習塾の元教室長。保護者個人面談を多数実施し、中学受験・高校受験を控えるお子さまを中心に、一人ひとりに合う学び方を提案してきました。</p><p>説明方法や教材を一つに決めつけず、お子さまの「分かる」を積み重ねます。</p></div>
   </div>
 </section>
 
-<section class="section alt" id="faq">
-  <div class="container">
-    <div class="section-head"><div class="eyebrow">FAQ</div><h2>よくある質問</h2></div>
-    <details><summary>発達特性のある子どもも受講できますか</summary><p>ご相談いただけます。WISC等の検査結果をお持ちの場合は、保護者さまの同意のもとでご共有ください。得意・苦手の傾向を学習計画の参考にし、お子さまに合う授業方法を検討します。</p><p class="small-note">イーナは医療・療育機関ではなく、診断や検査結果の医学的な判定は行いません。</p></details>
-    <details><summary>発達障害や学習障害などの診断がなくても相談できますか</summary><p>診断の有無にかかわらずご相談いただけます。保護者さまから見た学習の様子、学校の先生からのコメント、ノート、カラーテスト、模試、成績表などをご共有ください。体験授業での様子も踏まえて、お子さまに合うカリキュラムを作成します。</p></details>
-    <details><summary>オンライン授業には何が必要ですか</summary><ul><li>安定したWi-Fi環境</li><li>パソコン、タブレット、またはスマートフォン</li><li>講師とお子さま双方で使用する同じテキスト</li></ul><p>会話をしながら、理解度を確認して進めます。</p></details>
-    <details><summary>振替授業（無料）とは何ですか</summary><p>学校行事や急な体調不良の場合、授業開始2時間前までに保護者さまからお申し出いただければ、無料で別日に振り替えられる制度です。</p><p>対面授業の空きコマ、またはZoom等を利用したオンライン授業をご案内します。振替授業の再振替はできません。概ね2か月以内にお振り替えください。</p></details>
+<section class="section" id="faq">
+  <div class="container faq-layout">
+    <div class="section-head"><div class="eyebrow">FAQ</div><h2>よくある質問</h2><p>受講前によくいただくご質問をまとめました。</p></div>
+    <div class="faq-list">
+      <details><summary>発達特性のあるお子さまも受講できますか</summary><p>ご相談いただけます。WISC等の検査結果がある場合は、保護者さまの同意のもとで学習計画の参考にします。</p><p class="small-note">イーナは医療・療育機関ではなく、診断や検査結果の医学的な判定は行いません。</p></details>
+      <details><summary>診断がなくても相談できますか</summary><p>診断の有無にかかわらずご相談いただけます。ノート、テスト、学校の先生のコメント、体験授業での様子を参考にします。</p></details>
+      <details><summary>オンライン授業には何が必要ですか</summary><p>安定したWi-Fi環境と、パソコン・タブレット・スマートフォンのいずれかをご用意ください。教材については事前にご相談します。</p></details>
+      <details><summary>無料振替制度について教えてください</summary><p>学校行事や急な体調不良の場合、授業開始2時間前までに保護者さまからご連絡いただければ、対面授業の空きコマまたはオンライン授業へ振り替えます。</p></details>
+    </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section line-section">
   <div class="container line-cta">
-    <div><div class="eyebrow">OFFICIAL LINE</div><h2>まずはLINEでご相談ください</h2><p>ノート、カラーテスト、模試、成績表などの写真も送れます。現在の状況を確認し、次に必要な相談方法をご案内します。</p><div class="line-points"><span class="line-point">24時間受付</span><span class="line-point">1対1のトーク</span><span class="line-point">他の方には見えません</span><span class="line-point">しつこい自動配信なし</span></div><div class="hero-actions"><a class="button line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z" fill="currentColor"/><path d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z" fill="#ffffff"/></svg>LINEで友だち追加</a><span class="small-note">LINE ID：@869srjfq</span></div></div>
+    <div><div class="eyebrow">OFFICIAL LINE</div><h2>まずはLINEでご相談ください</h2><p>ノートやテストの写真も送れます。1対1のトークなので、他の方には見られません。</p><div class="line-points"><span class="line-point">24時間受付</span><span class="line-point">しつこい自動配信なし</span></div><div class="hero-actions"><a class="button line-inverse" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener">LINEで友だち追加</a><span class="small-note">LINE ID：@869srjfq</span></div></div>
     <div class="line-qr"><img src="assets/line-qr.webp" alt="個別指導イーナ 公式LINE QRコード"><span class="small-note">スマートフォンで読み取れます</span></div>
   </div>
 </section>
 </main>
-
 
 <footer class="site-footer">
   <div class="container">
@@ -181,7 +197,7 @@
         <span class="footer-note">電話受付：平日10:00-17:00。授業中は出られない場合があります。</span>
       </div>
     </div>
-    <div class="copyright">© 個別指導イーナ｜試作サイト v3</div>
+    <div class="copyright">© 個別指導イーナ</div>
   </div>
 </footer>
 <div class="mobile-cta">
@@ -189,6 +205,5 @@
   <a class="button primary" href="contact.html">メールフォーム</a>
 </div>
 <script src="script.js"></script>
-
 </body>
 </html>

@@ -2,18 +2,18 @@
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.nav');
 if (menuButton && nav) {
-  menuButton.addEventListener('click', () => nav.classList.toggle('open'));
+  menuButton.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+  });
 }
 
 const slider = document.querySelector('[data-slider]');
 if (slider) {
   const slides = [...slider.querySelectorAll('.slide')];
   const dots = [...slider.querySelectorAll('.slider-dot')];
-  const captions = [
-    'お子さまと会話しながら進める対面授業',
-    '個別指導イーナ',
-    '授業の理解度と次の課題を共有する授業報告書'
-  ];
+  const captions = slides.map((slide) => slide.dataset.caption || '');
   const caption = slider.querySelector('[data-slider-caption]');
   let current = 0;
   let timer;
