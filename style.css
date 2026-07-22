@@ -62,9 +62,10 @@ button{color:inherit}
 .button.tiny{min-height:40px;padding:7px 15px;font-size:var(--text-size);border-width:1px}
 
 .eyebrow{margin-bottom:10px;color:var(--green);font-size:var(--text-size);letter-spacing:0}
-.eyebrow,.number,.price,.consult-price,.price-display{font-family:Futura,"Futura PT","Gen Interface JP",sans-serif;font-style:normal;font-weight:500}
+.eyebrow,.number,.price,.consult-price{font-family:Futura,"Futura PT","Gen Interface JP",sans-serif;font-style:normal;font-weight:500}
 .eyebrow,.number{letter-spacing:.05em}
-.price,.consult-price,.price-display{letter-spacing:.02em}
+.price,.consult-price{letter-spacing:.02em}
+.price-display{font-family:"Gen Interface JP",sans-serif;font-style:normal;font-weight:500;letter-spacing:0}
 .price-inline{font-family:"Gen Interface JP",sans-serif;letter-spacing:0}
 h1,h2,h3,h4{margin-top:0;color:var(--navy);font-weight:400;line-height:1.45;text-wrap:pretty;word-break:auto-phrase}
 h1{margin-bottom:18px;font-size:var(--page-heading);letter-spacing:0}
