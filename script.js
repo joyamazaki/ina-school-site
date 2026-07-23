@@ -17,6 +17,186 @@ if (menuButton && nav) {
   nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
 }
 
+const createLoopCarousel = ({
+  root,
+  track,
+  slides,
+  dots,
+  dragSurface,
+  interval,
+  onChange
+}) => {
+  if (!root || !track || !slides.length) return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const pauseReasons = new Set();
+  let current = 0;
+  let trackIndex = slides.length > 1 ? 1 : 0;
+  let timer;
+  let remaining = interval;
+  let startedAt = 0;
+  let dragging = false;
+  let horizontalDrag = false;
+  let pointerId;
+  let startX = 0;
+  let startY = 0;
+  let deltaX = 0;
+
+  if (slides.length > 1) {
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides.at(-1).cloneNode(true);
+    [firstClone, lastClone].forEach((clone) => {
+      clone.classList.remove('active');
+      clone.classList.add('slide-clone');
+      clone.setAttribute('aria-hidden', 'true');
+    });
+    track.prepend(lastClone);
+    track.append(firstClone);
+  } else {
+    root.classList.add('is-single');
+  }
+
+  const moveTrack = (index, animate = true, dragOffset = 0) => {
+    track.classList.toggle('no-transition', !animate);
+    const offset = dragOffset
+      ? ` ${dragOffset > 0 ? '+' : '-'} ${Math.abs(dragOffset)}px`
+      : '';
+    track.style.transform = `translate3d(calc(-${index * 100}%${offset}), 0, 0)`;
+    if (!animate) {
+      void track.offsetWidth;
+      track.classList.remove('no-transition');
+    }
+  };
+
+  const updateUi = () => {
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === current);
+      slide.setAttribute('aria-hidden', index === current ? 'false' : 'true');
+    });
+    dots.forEach((dot) => dot.classList.remove('active', 'complete'));
+    void root.offsetWidth;
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('complete', index < current);
+      dot.classList.toggle('active', index === current);
+      dot.setAttribute('aria-current', index === current ? 'true' : 'false');
+    });
+    if (onChange) onChange(current);
+  };
+
+  const schedule = (delay = interval) => {
+    clearTimeout(timer);
+    remaining = delay;
+    if (reducedMotion || pauseReasons.size || slides.length < 2) return;
+    startedAt = performance.now();
+    timer = setTimeout(() => show(current + 1), delay);
+  };
+
+  const show = (index, animate = true) => {
+    if (index >= slides.length) {
+      current = 0;
+      trackIndex = slides.length + 1;
+    } else if (index < 0) {
+      current = slides.length - 1;
+      trackIndex = 0;
+    } else {
+      current = index;
+      trackIndex = index + 1;
+    }
+    updateUi();
+    moveTrack(trackIndex, animate && !reducedMotion);
+    schedule();
+  };
+
+  const pause = (reason) => {
+    if (reducedMotion || slides.length < 2 || pauseReasons.has(reason)) return;
+    if (!pauseReasons.size) {
+      remaining = Math.max(0, remaining - (performance.now() - startedAt));
+      clearTimeout(timer);
+    }
+    pauseReasons.add(reason);
+    root.classList.add('paused');
+  };
+
+  const resume = (reason) => {
+    if (reducedMotion || !pauseReasons.has(reason)) return;
+    pauseReasons.delete(reason);
+    if (pauseReasons.size) return;
+    root.classList.remove('paused');
+    schedule(Math.max(remaining, 100));
+  };
+
+  track.addEventListener('transitionend', (event) => {
+    if (event.propertyName !== 'transform') return;
+    if (trackIndex === 0) {
+      trackIndex = slides.length;
+      moveTrack(trackIndex, false);
+    } else if (trackIndex === slides.length + 1) {
+      trackIndex = 1;
+      moveTrack(trackIndex, false);
+    }
+  });
+
+  dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
+  root.addEventListener('mouseenter', () => pause('hover'));
+  root.addEventListener('mouseleave', () => resume('hover'));
+  root.addEventListener('focusin', () => pause('focus'));
+  root.addEventListener('focusout', () => resume('focus'));
+
+  if (dragSurface && slides.length > 1) {
+    const finishDrag = (event, cancelled = false) => {
+      if (!dragging || event.pointerId !== pointerId) return;
+      if (dragSurface.hasPointerCapture(pointerId)) dragSurface.releasePointerCapture(pointerId);
+      dragging = false;
+      dragSurface.classList.remove('is-dragging');
+      const threshold = Math.min(72, dragSurface.clientWidth * 0.14);
+      if (!cancelled && horizontalDrag && Math.abs(deltaX) >= threshold) {
+        show(current + (deltaX < 0 ? 1 : -1));
+      } else {
+        moveTrack(trackIndex, !reducedMotion);
+      }
+      horizontalDrag = false;
+      deltaX = 0;
+      resume('drag');
+    };
+
+    dragSurface.addEventListener('dragstart', (event) => event.preventDefault());
+    dragSurface.addEventListener('pointerdown', (event) => {
+      if (!event.isPrimary || event.button !== 0) return;
+      dragging = true;
+      horizontalDrag = false;
+      pointerId = event.pointerId;
+      startX = event.clientX;
+      startY = event.clientY;
+      deltaX = 0;
+      dragSurface.setPointerCapture(pointerId);
+      pause('drag');
+    });
+    dragSurface.addEventListener('pointermove', (event) => {
+      if (!dragging || event.pointerId !== pointerId) return;
+      const nextDeltaX = event.clientX - startX;
+      const deltaY = event.clientY - startY;
+      if (!horizontalDrag) {
+        if (Math.abs(nextDeltaX) < 7 && Math.abs(deltaY) < 7) return;
+        if (Math.abs(deltaY) > Math.abs(nextDeltaX)) {
+          finishDrag(event, true);
+          return;
+        }
+        horizontalDrag = true;
+        dragSurface.classList.add('is-dragging');
+      }
+      event.preventDefault();
+      const limit = dragSurface.clientWidth * 0.42;
+      deltaX = Math.max(-limit, Math.min(limit, nextDeltaX));
+      moveTrack(trackIndex, false, deltaX);
+    });
+    dragSurface.addEventListener('pointerup', (event) => finishDrag(event));
+    dragSurface.addEventListener('pointercancel', (event) => finishDrag(event, true));
+  }
+
+  updateUi();
+  moveTrack(trackIndex, false);
+  schedule();
+};
+
 const slider = document.querySelector('[data-slider]');
 if (slider) {
   const track = slider.querySelector('.slides');
@@ -24,36 +204,15 @@ if (slider) {
   const dots = [...slider.querySelectorAll('.slider-dot')];
   const captions = slides.map((slide) => (slide.dataset.caption || '').split('|'));
   const caption = slider.querySelector('[data-slider-caption]');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const interval = 5200;
-  let current = 0;
-  let trackIndex = 0;
-  let timer;
-  let remaining = interval;
-  let startedAt = 0;
-  let paused = false;
-
-  if (track && slides.length > 1) {
-    const firstClone = slides[0].cloneNode(true);
-    firstClone.classList.remove('active');
-    firstClone.classList.add('slide-clone');
-    firstClone.setAttribute('aria-hidden', 'true');
-    track.append(firstClone);
-  }
-
-  const updateUi = () => {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === current);
-      slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
-    });
-    dots.forEach((dot) => dot.classList.remove('active', 'complete'));
-    void slider.offsetWidth;
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('complete', i < current);
-      dot.classList.toggle('active', i === current);
-      dot.setAttribute('aria-current', i === current ? 'true' : 'false');
-    });
-    if (caption) {
+  createLoopCarousel({
+    root: slider,
+    track,
+    slides,
+    dots,
+    dragSurface: track,
+    interval: 5200,
+    onChange: (current) => {
+      if (!caption) return;
       caption.replaceChildren();
       captions[current].forEach((text, index) => {
         if (index > 0) caption.append(document.createElement('wbr'));
@@ -63,62 +222,37 @@ if (slider) {
         caption.append(phrase);
       });
     }
-  };
+  });
+}
 
-  const moveTrack = (index, animate = true) => {
-    if (!track) return;
-    track.classList.toggle('no-transition', !animate);
-    track.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
-    if (!animate) {
-      void track.offsetWidth;
-      track.classList.remove('no-transition');
+const voiceSlider = document.querySelector('[data-voice-slider]');
+if (voiceSlider) {
+  const track = voiceSlider.querySelector('.voice-track');
+  const slides = [...voiceSlider.querySelectorAll('.voice-slide')];
+  const dotsContainer = voiceSlider.querySelector('.voice-dots');
+  const attribution = voiceSlider.querySelector('[data-voice-attribution]');
+  const fullImageLink = voiceSlider.querySelector('[data-voice-link]');
+  const dots = slides.map((_, index) => {
+    const dot = document.createElement('button');
+    dot.className = 'voice-dot';
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `${index + 1}枚目`);
+    dotsContainer.append(dot);
+    return dot;
+  });
+  createLoopCarousel({
+    root: voiceSlider,
+    track,
+    slides,
+    dots,
+    dragSurface: voiceSlider.querySelector('.voice-viewport'),
+    interval: 6000,
+    onChange: (current) => {
+      const slide = slides[current];
+      if (attribution) attribution.textContent = slide.dataset.attribution || '';
+      if (fullImageLink) fullImageLink.href = slide.dataset.fullImage || '#';
     }
-  };
-
-  const schedule = (delay = interval) => {
-    clearTimeout(timer);
-    remaining = delay;
-    if (reducedMotion || paused || slides.length < 2) return;
-    startedAt = performance.now();
-    timer = setTimeout(() => show(current + 1), delay);
-  };
-
-  const show = (index, animate = true) => {
-    const isLoop = index >= slides.length;
-    current = isLoop ? 0 : (index + slides.length) % slides.length;
-    trackIndex = isLoop ? slides.length : current;
-    updateUi();
-    moveTrack(trackIndex, animate && !reducedMotion);
-    schedule();
-  };
-
-  if (track) {
-    track.addEventListener('transitionend', (event) => {
-      if (event.propertyName !== 'transform' || trackIndex !== slides.length) return;
-      trackIndex = 0;
-      moveTrack(0, false);
-    });
-  }
-
-  const pause = () => {
-    if (reducedMotion || paused) return;
-    paused = true;
-    slider.classList.add('paused');
-    remaining = Math.max(0, remaining - (performance.now() - startedAt));
-    clearTimeout(timer);
-  };
-
-  const resume = () => {
-    if (reducedMotion || !paused) return;
-    paused = false;
-    slider.classList.remove('paused');
-    schedule(Math.max(remaining, 100));
-  };
-
-  dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
-  slider.addEventListener('mouseenter', pause);
-  slider.addEventListener('mouseleave', resume);
-  show(0, false);
+  });
 }
 
 document.querySelectorAll('.faq-list details').forEach((details) => {
@@ -176,6 +310,7 @@ const revealItems = [...document.querySelectorAll([
   '.service-item',
   '.consultation-item',
   '.support-list article',
+  '.voice-slider',
   '.faq-list details',
   '.card',
   '.price-row',
@@ -216,3 +351,22 @@ document.querySelectorAll('form[data-demo]').forEach((form) => {
     alert('現在は試作版です。公開時に送信先を設定します。');
   });
 });
+
+const mobileCta = document.querySelector('.mobile-cta');
+if (mobileCta) {
+  const showAfter = 180;
+  let scrollTicking = false;
+
+  const updateMobileCta = () => {
+    mobileCta.classList.toggle('is-visible', window.scrollY >= showAfter);
+    scrollTicking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(updateMobileCta);
+  }, { passive: true });
+
+  updateMobileCta();
+}
