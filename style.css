@@ -165,7 +165,7 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .schedule-day.wide{min-width:72px}
 .map-link{display:inline-flex;align-items:center;gap:7px;margin-top:12px;padding-bottom:2px;border-bottom:1px solid var(--green);color:var(--green)}
 .map-link svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.panel-icon{width:46px;height:46px;padding:9px;border-radius:6px;background:var(--green);color:var(--white);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.panel-icon{width:46px;height:46px;padding:7px;border-radius:6px;background:var(--green);color:var(--white);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .service-layout .service-item .service-icon{width:46px;height:46px;padding:6px;border-radius:6px;background:var(--white);color:var(--green);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .event-layout .support-list .list-icon{width:46px;height:46px;padding:7px;border-radius:6px;background:var(--green);color:var(--white);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 
@@ -222,11 +222,11 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .voice-dot{position:relative;width:12px;height:12px;overflow:hidden;padding:0;border:1px solid var(--navy);border-radius:50%;background:var(--white);cursor:pointer}
 .voice-dot::before{content:"";position:absolute;inset:1px;border-radius:50%;background:var(--green);transform:scaleX(0);transform-origin:left}
 
-.consultation-grid .consultation-icon{width:46px;height:46px;margin-bottom:12px;padding:3px;border-radius:6px;background:var(--green);color:var(--white);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.consultation-grid .consultation-icon{width:46px;height:46px;margin-bottom:12px;padding:7px;border-radius:6px;background:var(--green);color:var(--white);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 
 .consultation-item .consult-price{display:flex;align-items:baseline;gap:2px;margin:0 0 6px;line-height:1}
-.consultation-item .price-number{font-size:44px;font-weight:700;line-height:1}
-.consultation-item .price-unit{font-size:18px;font-weight:700;line-height:1}
+.consultation-item .price-number{font-size:34px;font-weight:700;line-height:1;color:var(--green)}
+.consultation-item .price-unit{font-size:16px;font-weight:700;line-height:1;color:var(--green)}
 
 .mobile-cta-link:not(.line) .mobile-cta-label{width:auto;min-width:3em;white-space:normal;display:block;text-align:center}
 .voice-dot.active,.voice-dot.complete{border-color:var(--green)}
@@ -378,12 +378,14 @@ textarea{min-height:150px;resize:vertical}
   .service-list{grid-template-columns:1fr}
   .service-item{grid-template-columns:44px 1fr;gap:12px;min-height:0}
   .location-panel{grid-template-columns:44px 1fr;padding:17px}
-  .location-panel .panel-icon{width:42px;height:42px}
+  .location-panel .panel-icon{width:42px;height:42px;padding:6px}
   .service-layout .service-item .service-icon{width:42px;height:42px;padding:5px}
   .event-layout .support-list .list-icon{width:42px;height:42px;padding:6px}
   .event-layout .support-list article{grid-template-columns:44px 1fr;gap:12px}
-  .consultation-grid .consultation-icon{width:42px;height:42px;padding:3px;margin-bottom:12px}
+  .consultation-grid .consultation-icon{width:42px;height:42px;padding:6px;margin-bottom:12px}
   .consultation-item{padding:16px 14px}
+  .consultation-item .price-number{font-size:30px}
+  .consultation-item .price-unit{font-size:14px}
   .parent-voice-section .voice-viewport{position:relative;margin-right:-14px;padding-right:12%;border-right:0}
   .parent-voice-section .voice-viewport::after{content:"";position:absolute;top:0;right:0;z-index:1;width:36px;height:100%;background:linear-gradient(to right,var(--gray),var(--white));pointer-events:none}
   .voice-swipe-hint{display:block;margin-top:14px}
