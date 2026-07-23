@@ -221,7 +221,7 @@ if (slider) {
     slides,
     dots,
     dragSurface: track,
-    interval: 4300,
+    interval: 3400,
     onChange: (current) => {
       if (!caption) return;
       caption.replaceChildren();
