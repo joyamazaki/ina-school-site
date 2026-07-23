@@ -111,7 +111,7 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .hero-body-band{background:var(--white)}
 .home-hero .hero-copy{padding-top:8px;padding-bottom:38px;background:var(--white)}
 .home-hero .lead{max-width:850px;margin-bottom:0}
-.hero-slider{overflow:hidden;border-top:1px solid var(--gray);border-bottom:1px solid var(--gray);background:var(--gray)}
+.hero-slider{overflow:hidden;margin-top:12px;border:0;background:var(--gray)}
 .slides{position:relative;height:clamp(260px,31vh,350px);display:flex;touch-action:pan-y;cursor:grab;user-select:none;transition:transform .9s cubic-bezier(.65,0,.35,1);will-change:transform}
 .slides.is-dragging{cursor:grabbing}
 .slides.no-transition{transition:none}
@@ -132,10 +132,10 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 @keyframes slider-dot-fill{to{transform:scaleX(1)}}
 
 .split-feature{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:start}
-.section-photo,.classroom-photo,.consultation-photo,.event-photo,.teacher-photo,.feature-image{overflow:hidden;border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow)}
-.section-photo img,.classroom-photo img,.consultation-photo img,.event-photo img,.teacher-photo img,.feature-image img{width:100%;height:100%;object-fit:contain;background:var(--white)}
+.section-photo,.classroom-photo,.consultation-photo,.event-photo,.teacher-photo,.feature-image{overflow:hidden;border:4px solid var(--white);border-radius:var(--radius);background:var(--gray);box-shadow:var(--shadow)}
+.section-photo img,.classroom-photo img,.consultation-photo img,.event-photo img,.teacher-photo img,.feature-image img{width:100%;height:100%;object-fit:contain;background:var(--gray)}
 .media-heading-frame{align-self:start;overflow:hidden;border:0;border-radius:0;background:var(--white);box-shadow:var(--shadow-small)}
-.media-heading-frame .section-photo,.media-heading-frame .classroom-photo,.media-heading-frame .consultation-photo,.media-heading-frame .event-photo,.media-heading-frame .teacher-photo{border-radius:0;box-shadow:none}
+.media-heading-frame .section-photo,.media-heading-frame .classroom-photo,.media-heading-frame .consultation-photo,.media-heading-frame .event-photo,.media-heading-frame .teacher-photo{border-bottom:0;border-radius:0;box-shadow:none}
 .media-heading-frame .section-head{max-width:none;margin:0;border-top:0}
 .concerns-photo{aspect-ratio:3/2}
 .concern-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
@@ -147,10 +147,11 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .feature-item{display:grid;grid-template-rows:auto 1fr;overflow:hidden;border:0;border-radius:0;background:var(--white);box-shadow:var(--shadow-small)}
 .feature-item.reverse .feature-image,.feature-item.reverse .feature-copy{order:initial}
 .feature-image{min-height:0;aspect-ratio:3/2;border-radius:0;box-shadow:none}
+.feature-item .feature-image{border-bottom:0}
 .feature-image.online-image img{object-fit:cover}
 .feature-image.report-image{background:var(--gray)}
-.feature-image.report-image img{object-fit:contain;background:var(--white)}
-.feature-copy{display:flex;flex-direction:column;justify-content:flex-start;padding:26px 24px;border-top:1px solid var(--gray)}
+.feature-image.report-image img{object-fit:contain;background:var(--gray)}
+.feature-copy{display:flex;flex-direction:column;justify-content:flex-start;padding:26px 24px;border-top:0}
 .feature-copy p{margin-bottom:0}
 
 .classroom-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:46px;align-items:start}
@@ -199,12 +200,12 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .parent-voice-section{background:var(--gray)}
 .voice-slider{max-width:920px;margin:0 auto}
 .voice-frame{overflow:hidden;border:0;border-radius:0;background:var(--white);box-shadow:var(--shadow-small)}
-.voice-viewport{overflow:hidden;background:var(--white);touch-action:pan-y;cursor:grab;user-select:none}
+.voice-viewport{overflow:hidden;border:4px solid var(--white);border-bottom:0;background:var(--gray);touch-action:pan-y;cursor:grab;user-select:none}
 .voice-viewport.is-dragging{cursor:grabbing}
 .voice-track{display:flex;transition:transform .8s cubic-bezier(.65,0,.35,1);will-change:transform}
 .voice-track.no-transition{transition:none}
 .voice-slide{min-width:100%;display:block;flex:0 0 100%;margin:0}
-.voice-slide img{display:block;width:100%;height:auto;background:var(--white);pointer-events:none;-webkit-user-drag:none}
+.voice-slide img{display:block;width:100%;height:auto;background:var(--gray);pointer-events:none;-webkit-user-drag:none}
 .voice-heading-band{display:grid;grid-template-columns:1fr auto;align-items:end;gap:28px;padding:28px 32px;border-top:0;border-left:6px solid var(--navy);background:var(--white)}
 .voice-heading-copy{padding-left:0;border-left:0}
 .voice-heading-copy h2{margin:6px 0 10px}
@@ -297,7 +298,7 @@ textarea{min-height:150px;resize:vertical}
 .footer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:42px}
 .site-footer .brand{color:var(--white)}
 .footer-brand{width:max-content;margin-bottom:24px;padding:0;border-radius:0;background:var(--navy)}
-.footer-brand img{width:260px;height:auto;max-height:58px;border-radius:0}
+.footer-brand img{width:260px;height:auto;max-height:52px;border-radius:0}
 .site-footer p{color:var(--white)}
 .footer-contact{display:grid;gap:10px}
 .footer-link{display:flex;align-items:center;gap:10px;color:var(--white)}
@@ -377,7 +378,7 @@ textarea{min-height:150px;resize:vertical}
   .contact-big,.contact-mid,.contact-small{align-items:flex-start;flex-direction:column}
   .contact-action{width:100%}
   .footer-grid{grid-template-columns:1fr}
-  .site-footer .footer-brand img{width:min(68vw,260px);height:auto;max-height:58px}
+  .site-footer .footer-brand img{width:min(49vw,188px);height:auto;max-height:37px}
   .mobile-cta{display:flex;position:fixed;z-index:60;bottom:calc(14px + env(safe-area-inset-bottom));left:14px;align-items:flex-start;gap:10px;visibility:hidden;transform:translateY(calc(100% + 28px));pointer-events:none;transition:transform .42s cubic-bezier(.2,.8,.2,1),visibility 0s linear .42s}
   .mobile-cta.is-visible{visibility:visible;transform:translateY(0);pointer-events:auto;transition-delay:0s}
   .mobile-cta-link{display:block;width:64px;color:var(--white);text-decoration:none}
