@@ -24,6 +24,7 @@ const createLoopCarousel = ({
   dots,
   dragSurface,
   interval,
+  autoplay = true,
   onChange
 }) => {
   if (!root || !track || !slides.length) return;
@@ -37,9 +38,12 @@ const createLoopCarousel = ({
   let dragging = false;
   let horizontalDrag = false;
   let pointerId;
+  let pointerType = '';
   let startX = 0;
   let startY = 0;
   let deltaX = 0;
+
+  if (!autoplay) root.classList.add('manual');
 
   if (slides.length > 1) {
     const firstClone = slides[0].cloneNode(true);
@@ -85,7 +89,7 @@ const createLoopCarousel = ({
   const schedule = (delay = interval) => {
     clearTimeout(timer);
     remaining = delay;
-    if (reducedMotion || pauseReasons.size || slides.length < 2) return;
+    if (!autoplay || reducedMotion || pauseReasons.size || slides.length < 2) return;
     startedAt = performance.now();
     timer = setTimeout(() => show(current + 1), delay);
   };
@@ -107,7 +111,7 @@ const createLoopCarousel = ({
   };
 
   const pause = (reason) => {
-    if (reducedMotion || slides.length < 2 || pauseReasons.has(reason)) return;
+    if (!autoplay || reducedMotion || slides.length < 2 || pauseReasons.has(reason)) return;
     if (!pauseReasons.size) {
       remaining = Math.max(0, remaining - (performance.now() - startedAt));
       clearTimeout(timer);
@@ -117,7 +121,7 @@ const createLoopCarousel = ({
   };
 
   const resume = (reason) => {
-    if (reducedMotion || !pauseReasons.has(reason)) return;
+    if (!autoplay || reducedMotion || !pauseReasons.has(reason)) return;
     pauseReasons.delete(reason);
     if (pauseReasons.size) return;
     root.classList.remove('paused');
@@ -147,27 +151,28 @@ const createLoopCarousel = ({
       if (dragSurface.hasPointerCapture(pointerId)) dragSurface.releasePointerCapture(pointerId);
       dragging = false;
       dragSurface.classList.remove('is-dragging');
-      const threshold = Math.min(72, dragSurface.clientWidth * 0.14);
+      const threshold = Math.min(48, dragSurface.clientWidth * 0.1);
       if (!cancelled && horizontalDrag && Math.abs(deltaX) >= threshold) {
         show(current + (deltaX < 0 ? 1 : -1));
       } else {
         moveTrack(trackIndex, !reducedMotion);
       }
       horizontalDrag = false;
+      pointerType = '';
       deltaX = 0;
       resume('drag');
     };
 
     dragSurface.addEventListener('dragstart', (event) => event.preventDefault());
     dragSurface.addEventListener('pointerdown', (event) => {
-      if (!event.isPrimary || event.button !== 0) return;
+      if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) return;
       dragging = true;
       horizontalDrag = false;
       pointerId = event.pointerId;
+      pointerType = event.pointerType;
       startX = event.clientX;
       startY = event.clientY;
       deltaX = 0;
-      dragSurface.setPointerCapture(pointerId);
       pause('drag');
     });
     dragSurface.addEventListener('pointermove', (event) => {
@@ -182,6 +187,9 @@ const createLoopCarousel = ({
         }
         horizontalDrag = true;
         dragSurface.classList.add('is-dragging');
+        if (!dragSurface.hasPointerCapture(pointerId)) {
+          dragSurface.setPointerCapture(pointerId);
+        }
       }
       event.preventDefault();
       const limit = dragSurface.clientWidth * 0.42;
@@ -190,6 +198,9 @@ const createLoopCarousel = ({
     });
     dragSurface.addEventListener('pointerup', (event) => finishDrag(event));
     dragSurface.addEventListener('pointercancel', (event) => finishDrag(event, true));
+    dragSurface.addEventListener('pointerleave', (event) => {
+      if (pointerType === 'mouse') finishDrag(event);
+    });
   }
 
   updateUi();
@@ -210,7 +221,7 @@ if (slider) {
     slides,
     dots,
     dragSurface: track,
-    interval: 5200,
+    interval: 4300,
     onChange: (current) => {
       if (!caption) return;
       caption.replaceChildren();
@@ -247,10 +258,15 @@ if (voiceSlider) {
     dots,
     dragSurface: voiceSlider.querySelector('.voice-viewport'),
     interval: 6000,
+    autoplay: false,
     onChange: (current) => {
       const slide = slides[current];
       if (attribution) attribution.textContent = slide.dataset.attribution || '';
-      if (fullImageLink) fullImageLink.href = slide.dataset.fullImage || '#';
+      if (fullImageLink) {
+        const fullImage = slide.dataset.fullImage;
+        fullImageLink.hidden = !fullImage;
+        if (fullImage) fullImageLink.href = fullImage;
+      }
     }
   });
 }
