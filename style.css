@@ -133,9 +133,9 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .split-feature{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:start}
 .section-photo,.classroom-photo,.event-photo,.teacher-photo,.feature-image{overflow:hidden;border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow)}
 .section-photo img,.classroom-photo img,.event-photo img,.teacher-photo img,.feature-image img{width:100%;height:100%;object-fit:cover}
-.media-heading-frame{align-self:start;overflow:hidden;border:1px solid var(--gray);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-small)}
+.media-heading-frame{align-self:start;overflow:hidden;border:1px solid var(--gray);border-radius:0;background:var(--white);box-shadow:var(--shadow-small)}
 .media-heading-frame .section-photo,.media-heading-frame .classroom-photo,.media-heading-frame .event-photo,.media-heading-frame .teacher-photo{border-radius:0;box-shadow:none}
-.media-heading-frame .section-head{max-width:none;margin:0;border-top:1px solid var(--gray)}
+.media-heading-frame .section-head{max-width:none;margin:0;border-top:0}
 .concerns-photo{aspect-ratio:4/3}
 .concern-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
 .concern-list li{display:flex;align-items:center;gap:12px;min-height:54px;padding:10px 14px;border:1px solid var(--white);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-small)}
@@ -143,7 +143,7 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .section-note{margin:20px 0 0;padding:20px;border:1px solid var(--white);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-small);font-size:var(--text-size)}
 
 .feature-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.feature-item{display:grid;grid-template-rows:auto 1fr;overflow:hidden;border:1px solid var(--gray);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-small)}
+.feature-item{display:grid;grid-template-rows:auto 1fr;overflow:hidden;border:1px solid var(--gray);border-radius:0;background:var(--white);box-shadow:var(--shadow-small)}
 .feature-item.reverse .feature-image,.feature-item.reverse .feature-copy{order:initial}
 .feature-image{min-height:0;aspect-ratio:4/3;border-radius:0;box-shadow:none}
 .feature-image.report-image{background:var(--gray)}
@@ -195,15 +195,15 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 
 .parent-voice-section{background:var(--gray)}
 .voice-slider{max-width:920px;margin:0 auto}
-.voice-frame{overflow:hidden;border:1px solid var(--gray);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-small)}
+.voice-frame{overflow:hidden;border:1px solid var(--gray);border-radius:0;background:var(--white);box-shadow:var(--shadow-small)}
 .voice-viewport{overflow:hidden;touch-action:pan-y;cursor:grab;user-select:none}
 .voice-viewport.is-dragging{cursor:grabbing}
 .voice-track{display:flex;transition:transform .8s cubic-bezier(.65,0,.35,1);will-change:transform}
 .voice-track.no-transition{transition:none}
 .voice-slide{min-width:100%;display:block;flex:0 0 100%;margin:0}
 .voice-slide img{display:block;width:100%;height:auto;background:var(--white);pointer-events:none;-webkit-user-drag:none}
-.voice-heading-band{display:grid;grid-template-columns:1fr auto;align-items:end;gap:28px;padding:28px 32px;border-top:1px solid var(--gray);background:var(--white)}
-.voice-heading-copy{padding-left:22px;border-left:6px solid var(--navy)}
+.voice-heading-band{display:grid;grid-template-columns:1fr auto;align-items:end;gap:28px;padding:28px 32px;border-top:0;border-left:6px solid var(--navy);background:var(--white)}
+.voice-heading-copy{padding-left:0;border-left:0}
 .voice-heading-copy h2{margin:6px 0 10px}
 .voice-heading-copy p{margin:0;color:var(--navy)}
 .voice-heading-copy .voice-attribution{margin-top:16px;color:var(--navy);font-size:var(--text-size)}
@@ -354,8 +354,8 @@ textarea{min-height:150px;resize:vertical}
   .location-panel{grid-template-columns:44px 1fr;padding:17px}
   .panel-icon,.service-icon,.consultation-icon{width:42px;height:42px}
   .consultation-item{padding:22px}
-  .voice-heading-band{grid-template-columns:1fr;gap:16px;padding:22px 20px}
-  .voice-heading-copy{padding-left:18px;border-left-width:5px}
+  .voice-heading-band{grid-template-columns:1fr;gap:16px;padding:22px 20px;border-left-width:5px}
+  .voice-heading-copy{padding-left:0}
   .voice-heading-copy h2{font-size:var(--section-heading)}
   .voice-link{justify-self:start}
   .line-cta{gap:26px;padding:28px 20px}
