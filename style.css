@@ -240,6 +240,12 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .voice-slider.manual .voice-dot.complete{border-color:var(--navy)}
 .voice-slider.manual .voice-dot.active::before{transform:scaleX(1)}
 @keyframes voice-dot-fill{to{transform:scaleX(1)}}
+.voice-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.voice-card{overflow:hidden;border:1px solid var(--white);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-small)}
+.voice-card-image{display:block;aspect-ratio:3/2;overflow:hidden;background:linear-gradient(90deg,#c0d2ed 0%,#c7e0c3 100%)}
+.voice-card-image img{width:100%;height:100%;object-fit:contain;background:linear-gradient(90deg,#c0d2ed 0%,#c7e0c3 100%);pointer-events:none;-webkit-user-drag:none}
+.voice-card-caption{margin:0;padding:14px 16px;color:var(--navy);font-size:var(--text-size);line-height:1.6}
+.voice-gallery-section:has(.voice-gallery:empty){padding:0}
 
 .faq-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:46px;align-items:start}
 .faq-list{display:grid;gap:10px}
@@ -396,6 +402,7 @@ textarea{min-height:150px;resize:vertical}
   .voice-heading-copy{padding-left:0}
   .voice-heading-copy h2{font-size:var(--section-heading)}
   .voice-link{justify-self:start}
+  .voice-gallery{grid-template-columns:1fr}
   .line-cta{gap:26px;padding:28px 20px}
   .line-section .line-cta{padding:28px 20px}
   .line-cta .hero-actions .button{width:100%}
