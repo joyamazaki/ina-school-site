@@ -113,7 +113,7 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .hero-body-band{background:var(--white)}
 .home-hero .hero-copy{padding-top:8px;padding-bottom:38px;background:var(--white)}
 .home-hero .lead{max-width:850px;margin-bottom:0}
-.hero-slider{overflow:hidden;margin-top:12px;border:0;background:linear-gradient(90deg, #c0d2ed 0%, #c7e0c3 100%)}
+.hero-slider{overflow:hidden;margin-top:0;border:0;background:linear-gradient(90deg, #c0d2ed 0%, #c7e0c3 100%)}
 .slides{position:relative;height:clamp(260px,31vh,350px);display:flex;touch-action:pan-y pinch-zoom;cursor:grab;user-select:none;transition:transform .7s cubic-bezier(.65,0,.35,1);will-change:transform}
 .slides.is-dragging{cursor:grabbing}
 .slides.no-transition{transition:none}
@@ -204,9 +204,6 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .voice-track.no-transition{transition:none}
 .voice-slide{min-width:100%;display:block;flex:0 0 100%;margin:0}
 .voice-slide img{display:block;width:100%;height:auto;background:linear-gradient(90deg, #c0d2ed 0%, #c7e0c3 100%);pointer-events:none;-webkit-user-drag:none}
-.voice-image-link-row{display:flex;align-items:center;justify-content:space-between;padding:22px 32px 0}
-.voice-image-link-row .voice-link{display:inline-flex;white-space:nowrap}
-.voice-image-link-row .voice-dots{margin-left:auto;margin-top:0}
 .voice-heading-band{display:grid;gap:18px;padding:28px 32px;border-top:0;border-left:6px solid var(--navy);background:var(--white)}
 .voice-heading-top{display:flex;align-items:center;justify-content:space-between;gap:18px}
 .voice-heading-top .eyebrow{margin-bottom:0}
@@ -214,9 +211,6 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 .voice-heading-copy h2{margin:6px 0 10px}
 .voice-heading-copy p{margin:0;color:var(--navy)}
 .voice-heading-copy .voice-attribution{margin-top:16px;color:var(--navy);font-size:var(--text-size)}
-.voice-heading-actions{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%}
-.voice-heading-actions .voice-dots{margin-top:0;justify-content:flex-end;flex:0 0 auto}
-.voice-heading-actions .voice-link{align-self:center;white-space:normal;text-align:left;flex:1;min-width:0}
 .mobile-cta-link.line .mobile-cta-label{white-space:nowrap;width:auto}
 .voice-link{color:var(--green);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;white-space:nowrap}
 .voice-swipe-hint{display:none;margin:0;color:var(--green);font-size:var(--text-size);text-align:center}
@@ -242,6 +236,7 @@ p,li,summary{word-break:auto-phrase;text-wrap:pretty}
 @keyframes voice-dot-fill{to{transform:scaleX(1)}}
 .voice-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .voice-card{overflow:hidden;border:1px solid var(--white);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-small)}
+.voice-card-placeholder{display:flex;aspect-ratio:3/2;align-items:center;justify-content:center;background:linear-gradient(90deg,#c0d2ed 0%,#c7e0c3 100%);color:var(--navy)}
 .voice-card-image{display:block;aspect-ratio:3/2;overflow:hidden;background:linear-gradient(90deg,#c0d2ed 0%,#c7e0c3 100%)}
 .voice-card-image img{width:100%;height:100%;object-fit:contain;background:linear-gradient(90deg,#c0d2ed 0%,#c7e0c3 100%);pointer-events:none;-webkit-user-drag:none}
 .voice-card-caption{margin:0;padding:14px 16px;color:var(--navy);font-size:var(--text-size);line-height:1.6}
@@ -395,8 +390,6 @@ textarea{min-height:150px;resize:vertical}
   .consultation-item{padding:16px 14px}
   .consultation-item .price-number{font-size:30px}
   .consultation-item .price-unit{font-size:14px}
-  .parent-voice-section .voice-viewport{position:relative;margin-right:-14px;padding-right:12%;border-right:0}
-  .parent-voice-section .voice-viewport::after{content:"";position:absolute;top:0;right:0;z-index:1;width:36px;height:100%;background:linear-gradient(to right,var(--gray),var(--white));pointer-events:none}
   .voice-swipe-hint{display:block;margin-top:14px}
   .voice-heading-band{grid-template-columns:1fr;gap:16px;padding:22px 20px;border-left-width:5px}
   .voice-heading-copy{padding-left:0}

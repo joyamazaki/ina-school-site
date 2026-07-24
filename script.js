@@ -243,14 +243,14 @@ if (voiceSlider) {
   const dotsContainer = voiceSlider.querySelector('.voice-dots');
   const attribution = voiceSlider.querySelector('[data-voice-attribution]');
   const fullImageLink = voiceSlider.querySelector('[data-voice-link]');
-  const dots = slides.map((_, index) => {
+  const dots = dotsContainer ? slides.map((_, index) => {
     const dot = document.createElement('button');
     dot.className = 'voice-dot';
     dot.type = 'button';
     dot.setAttribute('aria-label', `${index + 1}枚目`);
     dotsContainer.append(dot);
     return dot;
-  });
+  }) : [];
   createLoopCarousel({
     root: voiceSlider,
     track,
