@@ -361,12 +361,7 @@ if (revealItems.length && 'IntersectionObserver' in window && !window.matchMedia
   revealGroups.forEach((items, group) => revealObserver.observe(group));
 }
 
-document.querySelectorAll('form[data-demo]').forEach((form) => {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    alert('現在は試作版です。公開時に送信先を設定します。');
-  });
-});
+
 
 const mobileCta = document.querySelector('.mobile-cta');
 if (mobileCta) {

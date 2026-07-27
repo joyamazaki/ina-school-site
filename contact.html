@@ -45,14 +45,21 @@
   </div>
 
   <section id="mail-form" class="prose" style="margin-top:58px"><h2>お問い合わせフォーム</h2>
-    <form class="form-grid" data-demo>
-      <label class="field"><span>保護者さまのお名前</span><input type="text" required></label>
-      <label class="field"><span>お子さまの学年</span><input type="text" placeholder="例：小学5年生"></label>
-      <label class="field"><span>メールアドレス</span><input type="email" required></label>
-      <label class="field"><span>希望内容</span><select><option>選択してください</option><option>無料学習相談</option><option>有料学習相談</option><option>体験授業</option><option>講習会（外部の方）</option><option>料金詳細PDFの請求</option><option>その他</option></select></label>
-      <label class="field"><span>希望する授業形態</span><select><option>選択してください</option><option>駒込hahaco校</option><option>笹塚校</option><option>オンライン校</option><option>相談して決めたい</option></select></label>
-      <label class="field"><span>希望する連絡方法</span><select><option>選択してください</option><option>LINE</option><option>メール</option><option>Instagram DM（@school_i_na）</option><option>電話</option></select></label>
-      <label class="field full"><span>相談内容</span><textarea placeholder="勉強に関するお困りごと、お子さまのご性格、現在の学習状況、希望教科などをご記入ください。"></textarea></label>
+    <form class="form-grid" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden>
+        <label>
+          この欄には入力しないでください
+          <input name="bot-field">
+        </label>
+      </p>
+      <label class="field"><span>保護者さまのお名前</span><input type="text" name="parent_name" required></label>
+      <label class="field"><span>お子さまの学年</span><input type="text" name="child_grade" placeholder="例：小学5年生"></label>
+      <label class="field"><span>メールアドレス</span><input type="email" name="email" required></label>
+      <label class="field"><span>希望内容</span><select name="inquiry_type" required><option value="" selected>選択してください</option><option value="無料学習相談">無料学習相談</option><option value="有料学習相談">有料学習相談</option><option value="体験授業">体験授業</option><option value="講習会（外部の方）">講習会（外部の方）</option><option value="料金詳細PDFの請求">料金詳細PDFの請求</option><option value="その他">その他</option></select></label>
+      <label class="field"><span>希望する授業形態</span><select name="lesson_style" required><option value="" selected>選択してください</option><option value="駒込hahaco校">駒込hahaco校</option><option value="笹塚校">笹塚校</option><option value="オンライン校">オンライン校</option><option value="相談して決めたい">相談して決めたい</option></select></label>
+      <label class="field"><span>希望する連絡方法</span><select name="contact_method" required><option value="" selected>選択してください</option><option value="LINE">LINE</option><option value="メール">メール</option><option value="Instagram DM（@school_i_na）">Instagram DM（@school_i_na）</option><option value="電話">電話</option></select></label>
+      <label class="field full"><span>相談内容</span><textarea name="message" placeholder="勉強に関するお困りごと、お子さまのご性格、現在の学習状況、希望教科などをご記入ください。"></textarea></label>
       <div class="field full"><button class="button primary" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.1 7-5.1V7H5Zm14 10V9.8l-7 5-7-5V17h14Z" fill="currentColor"/></svg>入力内容を送信</button></div>
     </form>
     <div class="contact-mid" style="margin-top:22px"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.1 7-5.1V7H5Zm14 10V9.8l-7 5-7-5V17h14Z" fill="currentColor"/></svg></span><span class="contact-copy"><strong>メールで直接送る</strong><span><a href="mailto:i.na.yamazakinami.26@gmail.com">i.na.yamazakinami.26@gmail.com</a></span></span></div>
