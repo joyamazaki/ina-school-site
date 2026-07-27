@@ -1,264 +1,575 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>勉強嫌いを変える個別指導｜個別指導イーナ</title>
-<meta name="description" content="なみ先生が、お子さまの学力や特性に合わせて対話型の個別指導を行います。駒込、笹塚、オンラインに対応。">
-<link rel="icon" href="assets/logo.webp">
-<link rel="stylesheet" href="style.css?v=20260724-9">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>勉強嫌いを変える個別指導｜個別指導イーナ</title>
+  <meta name="description" content="なみ先生が、お子さまの学力や特性に合わせて対話型の個別指導を行います。駒込、笹塚、オンラインに対応。">
+  <link rel="icon" href="assets/logo.webp">
+  <link rel="stylesheet" href="style.css?v=20260724-9">
 </head>
+
 <body class="home">
 
-<svg class="icon-library" aria-hidden="true">
-  <symbol id="icon-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 2.6 2.6L16.5 9"></path></symbol>
-  <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3v-7a4 4 0 0 1-1-2.6V7a4 4 0 0 1 4-4h11a4 4 0 0 1 4 4Z"></path><path d="M8 9h8M8 13h5"></path></symbol>
-  <symbol id="icon-book" viewBox="0 0 24 24"><path d="M3 4h6a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H3Z"></path><path d="M21 4h-6a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h6Z"></path></symbol>
-  <symbol id="icon-file" viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6Z"></path><path d="M14 2v5h5M9 12h6M9 16h6"></path></symbol>
-  <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8"></path><path d="M5 10v11h14V10M9 21v-7h6v7"></path></symbol>
-  <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2"></circle><path d="M3 21v-2a6 6 0 0 1 12 0v2M15 15a4 4 0 0 1 6 3.5V20"></path></symbol>
-  <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M7 3v4M17 3v4M3 10h18M8 14h3M13 14h3M8 17h3"></path></symbol>
-  <symbol id="icon-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></symbol>
-  <symbol id="icon-map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
-  <symbol id="icon-school" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"></path><path d="M8 10h2M14 10h2"></path></symbol>
-  <symbol id="icon-lecture" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 9h8M8 13h5M8 21l4-4 4 4"></path></symbol>
-</svg>
+  <svg class="icon-library" aria-hidden="true">
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="m8 12 2.6 2.6L16.5 9"></path>
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <path d="M21 15a4 4 0 0 1-4 4H8l-5 3v-7a4 4 0 0 1-1-2.6V7a4 4 0 0 1 4-4h11a4 4 0 0 1 4 4Z"></path>
+      <path d="M8 9h8M8 13h5"></path>
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M3 4h6a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H3Z"></path>
+      <path d="M21 4h-6a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h6Z"></path>
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24">
+      <path d="M6 2h9l4 4v16H6Z"></path>
+      <path d="M14 2v5h5M9 12h6M9 16h6"></path>
+    </symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24">
+      <path d="m3 11 9-8 9 8"></path>
+      <path d="M5 10v11h14V10M9 21v-7h6v7"></path>
+    </symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24">
+      <circle cx="9" cy="8" r="3"></circle>
+      <circle cx="17" cy="9" r="2"></circle>
+      <path d="M3 21v-2a6 6 0 0 1 12 0v2M15 15a4 4 0 0 1 6 3.5V20"></path>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+      <path d="M7 3v4M17 3v4M3 10h18M8 14h3M13 14h3M8 17h3"></path>
+    </symbol>
+    <symbol id="icon-monitor" viewBox="0 0 24 24">
+      <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+      <path d="M8 21h8M12 17v4"></path>
+    </symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24">
+      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+      <circle cx="12" cy="10" r="2.5"></circle>
+    </symbol>
+    <symbol id="icon-school" viewBox="0 0 24 24">
+      <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"></path>
+      <path d="M8 10h2M14 10h2"></path>
+    </symbol>
+    <symbol id="icon-lecture" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="13" rx="2"></rect>
+      <path d="M8 9h8M8 13h5M8 21l4-4 4 4"></path>
+    </symbol>
+  </svg>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="個別指導イーナ トップへ">
-      <img src="assets/logo-horizontal.svg?v=20260723-2" alt="個別指導イーナ">
-    </a>
-    <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">☰</button>
-    <nav class="nav" aria-label="メインナビゲーション">
-      <a href="index.html#features">個別指導</a>
-      <a href="index.html#classrooms">教室・オンライン</a>
-      <a href="pricing.html">料金</a>
-      <a href="voices.html">体験記</a>
-      <a href="index.html#faq">よくある質問</a>
-      <a href="contact.html">お問い合わせ</a>
-    </nav>
-    <a class="button line small" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z" fill="currentColor"/><path d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z" fill="#ffffff"/></svg>LINEで相談</a>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="個別指導イーナ トップへ">
+        <img src="assets/logo-horizontal.svg?v=20260723-2" alt="個別指導イーナ">
+      </a>
+      <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html#features">個別指導</a>
+        <a href="index.html#classrooms">教室・オンライン</a>
+        <a href="pricing.html">料金</a>
+        <a href="voices.html">体験記</a>
+        <a href="index.html#faq">よくある質問</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+      <a class="button line small" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path
+            d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z"
+            fill="currentColor" />
+          <path
+            d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z"
+            fill="#ffffff" />
+        </svg>LINEで相談</a>
+    </div>
+  </header>
 
-<main>
-<section class="home-hero">
-  <div class="hero-slider" data-slider aria-label="授業風景スライダー">
-    <div class="slides">
-      <figure class="slide active" data-caption="一人ひとりの「できた」を、|次の一歩へ"><picture><source media="(max-width:680px)" srcset="assets/home-hero-1-mobile.webp?v=20260723-5"><source media="(min-width:681px)" srcset="assets/home-hero-1-desktop.webp?v=20260723-5"><img src="assets/home-hero-1-desktop.webp?v=20260723-5" alt="なみ先生と教材を手にしたお子さまたち"></picture></figure>
-      <figure class="slide" data-caption="講習会や保護者さま向けの特別講座も開催"><picture><source media="(max-width:680px)" srcset="assets/L.jpg?v=20260724-1"><source media="(min-width:681px)" srcset="assets/L.jpg?v=20260724-1"><img src="assets/L.jpg?v=20260724-1" alt="中学受験・塾選び・志望校選び講座のご案内"></picture></figure>
-      <figure class="slide" data-caption="目標に向かう気持ちも、|一緒に育てます"><picture><source media="(max-width:680px)" srcset="assets/TOP03.png?v=20260724-1"><source media="(min-width:681px)" srcset="assets/TOP03.png?v=20260724-1"><img src="assets/TOP03.png?v=20260724-1" alt="なみ先生がお子さまと一緒に学習に取り組む様子"></picture></figure>
-    </div>
-    <div class="slider-meta container">
-      <p class="slider-caption" data-slider-caption><span class="keep-together">一人ひとりの「できた」を、</span><wbr><span class="keep-together">次の一歩へ</span></p>
-      <div class="slider-dots" aria-label="写真を選択">
-        <button class="slider-dot active" type="button" aria-label="1枚目"></button>
-        <button class="slider-dot" type="button" aria-label="2枚目"></button>
-        <button class="slider-dot" type="button" aria-label="3枚目"></button>
-      </div>
-    </div>
-  </div>
-  <div class="hero-title-band">
-    <div class="container"><h1><span class="keep-together">勉強嫌いを変える</span><wbr><span class="keep-together">個別指導</span></h1></div>
-  </div>
-  <div class="hero-body-band">
-    <div class="container hero-copy">
-      <p class="lead"><span class="keep-together">「勉強が苦手」じゃなくて、</span><wbr><span class="keep-together">まだ合う学び方に出会っていないだけ。</span><wbr><span class="keep-together">お子さまの理解の仕方に合わせて、</span><wbr><span class="keep-together">対話しながら学習方法を組み立てます。</span></p>
-      <div class="hero-actions">
-        <a class="button line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z" fill="currentColor"/><path d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z" fill="#ffffff"/></svg>LINEで無料相談</a>
-        <a class="button" href="#classrooms">教室・オンライン</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-gray section-compact">
-  <div class="container split-feature">
-    <div class="media-heading-frame">
-      <div class="section-photo concerns-photo"><img src="assets/home-teacher.webp?v=20260723-6" alt="教室で学習について相談する様子"></div>
-      <div class="section-head media-heading"><div class="eyebrow">CONCERNS</div><h2>こんな学習の困りごと、<br>ご相談ください</h2></div>
-    </div>
-    <div>
-      <ul class="concern-list">
-        <li><svg class="list-icon" aria-hidden="true"><use href="#icon-check"></use></svg><span>集団授業では質問しにくい</span></li>
-        <li><svg class="list-icon" aria-hidden="true"><use href="#icon-check"></use></svg><span>理解するまでに時間がかかる</span></li>
-        <li><svg class="list-icon" aria-hidden="true"><use href="#icon-check"></use></svg><span>集中や宿題の進め方に困っている</span></li>
-        <li><svg class="list-icon" aria-hidden="true"><use href="#icon-check"></use></svg><span>通塾せず、自宅から学びたい</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section section-compact" id="features">
-  <div class="container">
-    <div class="section-head centered"><div class="eyebrow">PERSONAL LEARNING</div><h2>合う学び方を、<br>一緒につくる</h2><p>一律の進め方ではなく、お子さまの反応を確かめながら授業を調整します。</p></div>
-    <div class="feature-list">
-      <article class="feature-item">
-        <div class="feature-image online-image"><img src="assets/home-feature-conversation.webp?v=20260723-2" alt="教室でお子さまと対話しながら指導するなみ先生"></div>
-        <div class="feature-copy"><div class="number">POINT 1</div><h3>対話で理解を確かめる</h3><p>会話と手元を見ながら理解度を確認し、分からない部分は説明方法を変えて進めます。</p></div>
-      </article>
-      <article class="feature-item reverse">
-        <div class="feature-image"><img src="assets/home-feature-plan.webp?v=20260723-6" alt="教室でお子さまの教材を確認しながら指導するなみ先生"></div>
-        <div class="feature-copy"><div class="number">POINT 2</div><h3>その日に合わせて組み立てる</h3><p>教材の難易度、予習と復習の配分、進度、宿題量を、お子さまの様子に合わせて調整します。</p></div>
-      </article>
-      <article class="feature-item">
-        <div class="feature-image report-image"><img src="assets/home-feature-report.webp?v=20260723-5" alt="授業内容と理解度を記録した授業報告書"></div>
-        <div class="feature-copy"><div class="number">POINT 3</div><h3>授業のあとまで共有する</h3><p>毎回の授業内容、理解度、次の課題を授業報告書で保護者さまへ共有します。</p></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section section-gray section-compact" id="classrooms">
-  <div class="container classroom-layout">
-    <div class="media-heading-frame">
-      <div class="classroom-photo"><img src="assets/home-feature-dialogue.webp?v=20260723-5" alt="オンライン授業でホワイトボードを使って説明するなみ先生"></div>
-      <div class="section-head media-heading"><div class="eyebrow">CLASSROOMS</div><h2>通いやすい形で<br>続けられます</h2><p>対面授業とオンライン授業から、ご家庭に合う形を選べます。</p></div>
-    </div>
-    <div>
-      <div class="location-list">
-        <article class="location-panel"><svg class="panel-icon" aria-hidden="true"><use href="#icon-school"></use></svg><div><h3>駒込hahaco校</h3><p>教室で受講する対面授業です。</p><div class="schedule-days" aria-label="開講曜日"><span class="schedule-day">火</span><span class="schedule-day">木</span></div><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AB%E3%83%95%E3%82%A7hahaco%20%E9%A7%92%E8%BE%BC" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-map"></use></svg>Google Map</a></div></article>
-        <article class="location-panel"><svg class="panel-icon" aria-hidden="true"><use href="#icon-lecture"></use></svg><div><h3>笹塚校</h3><p>学校の休業期間を中心に、講習会対面授業を行います。</p><div class="schedule-days" aria-label="開講形態"><span class="schedule-day wide">講習会</span></div><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%95%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B9%E3%83%91%E3%83%AC%E3%82%B9%E7%AC%B9%E5%A1%9A" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-map"></use></svg>Google Map</a></div></article>
-        <article class="location-panel"><svg class="panel-icon" aria-hidden="true"><use href="#icon-monitor"></use></svg><div><h3>オンライン校</h3><p>自宅から受講できます。</p><div class="schedule-days" aria-label="開講曜日"><span class="schedule-day">月</span><span class="schedule-day">水</span><span class="schedule-day">金</span><span class="schedule-day">土</span><span class="schedule-day">日</span></div></div></article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-compact">
-  <div class="container service-layout">
-    <div class="section-head"><div class="eyebrow">SERVICES</div><h2>授業と家庭学習を<br>つなぐ基本サービス</h2><p>授業だけで終わらず、日々の学習と保護者さまへの共有まで支えます。</p></div>
-    <div class="service-list">
-      <article class="service-item"><svg class="service-icon" aria-hidden="true"><use href="#icon-book"></use></svg><div><h3><span class="keep-together">オーダーメイド</span><wbr><span class="keep-together">カリキュラム</span></h3><p>目標と理解度に合わせて、教材や進度を調整します。</p></div></article>
-      <article class="service-item"><svg class="service-icon" aria-hidden="true"><use href="#icon-file"></use></svg><div><h3>授業報告書</h3><p>授業内容、理解度、次の課題を毎回共有します。</p></div></article>
-      <article class="service-item"><svg class="service-icon" aria-hidden="true"><use href="#icon-home"></use></svg><div><h3>家庭学習サポート</h3><p>宿題の量と内容を相談し、無理のない形で日割りにします。</p></div></article>
-      <article class="service-item"><svg class="service-icon" aria-hidden="true"><use href="#icon-users"></use></svg><div><h3>保護者面談（無料）</h3><p>最低年3回、対面・オンライン・電話・LINEで行います。</p></div></article>
-    </div>
-  </div>
-</section>
-
-<section class="section section-gray section-compact">
-  <div class="container">
-    <div class="media-heading-frame consultation-visual">
-      <div class="consultation-photo"><img src="assets/home-consultation.png?v=20260723-1" alt="教室で保護者さま向け講座を行う様子"></div>
-      <div class="section-head media-heading"><div class="eyebrow">CONSULTATION</div><h2>相談・体験から<br>始められます</h2><p>まずはLINEで、現在のお困りごとをお聞かせください。</p></div>
-    </div>
-    <div class="consultation-grid">
-      <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true"><use href="#icon-chat"></use></svg><h3>無料学習相談</h3><p class="consult-price"><span class="price-number">0</span><span class="price-unit">円</span></p><p><span class="keep-together">電話またはLINEで、</span><wbr><span class="keep-together">現在の状況を伺います。</span></p></article>
-      <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true"><use href="#icon-users"></use></svg><h3>有料学習相談</h3><p class="consult-price"><span class="price-number">3000</span><span class="price-unit">円</span></p><p><span class="keep-together">対面またはオンラインで、</span><wbr><span class="keep-together">学習の方針を整理します。</span></p></article>
-      <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true"><use href="#icon-book"></use></svg><h3>体験授業</h3><p class="consult-price"><span class="price-number">4000</span><span class="price-unit">円</span></p><p><span class="keep-together">実際に授業を行い、</span><wbr><span class="keep-together">今後の学習プランをご提案します。</span></p></article>
-    </div>
-    <div class="center-actions"><a class="button line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener">LINEで相談する</a><a class="button" href="pricing.html">料金の概要を見る</a></div>
-  </div>
-</section>
-
-<section class="section section-compact">
-  <div class="container event-layout">
-    <div class="media-heading-frame">
-      <div class="event-photo"><img src="assets/home-support.png?v=20260723-1" alt="保護者さま向け受験講座の開催風景"></div>
-      <div class="section-head media-heading"><div class="eyebrow">SUPPORT</div><h2>続けやすさと、<br>学びの機会を</h2></div>
-    </div>
-    <div>
-      <div class="support-list">
-        <article><svg class="list-icon" aria-hidden="true"><use href="#icon-calendar"></use></svg><div><h3>無料振替制度</h3><p>学校行事や急な体調不良のときは、条件の範囲内で別日に振り替えられます。</p></div></article>
-        <article><svg class="list-icon" aria-hidden="true"><use href="#icon-users"></use></svg><div><h3>ご紹介制度</h3><p>ご紹介者さまとご入会者さま、それぞれに特典をご用意しています。</p></div></article>
-        <article><svg class="list-icon" aria-hidden="true"><use href="#icon-book"></use></svg><div><h3>受験講座・アート教室</h3><p>保護者さま向けの受験情報講座や、お子さま向けのアート教室を行います。</p></div></article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-gray section-compact">
-  <div class="container teacher-block">
-    <div class="media-heading-frame">
-      <div class="teacher-photo"><img src="assets/teacher.png?v=20260723-6" alt="教材を手にして笑顔を見せるなみ先生とお子さま"></div>
-      <div class="section-head media-heading"><div class="eyebrow">TEACHER</div><h2>なみ先生</h2></div>
-    </div>
-    <div class="teacher-copy"><p class="lead">大手個別学習塾の元教室長。保護者個人面談を多数実施し、中学受験・高校受験を控えるお子さまを中心に、一人ひとりに合う学び方を提案してきました。</p><p>説明方法や教材を一つに決めつけず、お子さまの「分かる」を積み重ねます。</p></div>
-  </div>
-</section>
-
-<section class="section parent-voice-section">
-  <div class="container">
-    <div class="voice-slider" data-voice-slider aria-label="保護者さまの体験記">
-      <div class="voice-frame">
-        <div class="voice-viewport">
-          <div class="voice-track">
-            <figure class="voice-slide" data-attribution="小2生　保護者　I.Aさま" data-full-image="assets/taiken00.jpg">
-              <img src="assets/taiken00.jpg" alt="保護者さまから寄せられた手書きの体験記" width="1800" height="1200" loading="lazy" decoding="async">
-            </figure>
-            <figure class="voice-slide" data-attribution="年長から就学準備、小学1年生から個別指導を受講する保護者さまより">
-              <img src="assets/parent-review-placeholder-02.svg" alt="保護者さまの体験記2は準備中です" width="1800" height="1200" loading="lazy" decoding="async">
-            </figure>
-            <figure class="voice-slide" data-attribution="年長から就学準備、小学1年生から個別指導を受講する保護者さまより">
-              <img src="assets/parent-review-placeholder-03.svg" alt="保護者さまの体験記3は準備中です" width="1800" height="1200" loading="lazy" decoding="async">
-            </figure>
-          </div>
-        <div class="voice-heading-band">
-          <div class="voice-heading-top">
-            <div class="eyebrow">VOICES</div>
-          </div>
-          <div class="voice-heading-copy">
-            <h2>保護者さま・<br>お子さまの体験記</h2>
-            <p>通ってくださっている<br>保護者さま・お子さまより、<br>イーナまで嬉しいコメントをいただきました！</p>
-            <p class="voice-attribution" data-voice-attribution>小2生　保護者　I.Aさま</p>
+  <main>
+    <section class="home-hero">
+      <div class="hero-slider" data-slider aria-label="授業風景スライダー">
+        <div class="slides">
+          <figure class="slide active" data-caption="一人ひとりの「できた」を、|次の一歩へ">
+            <picture>
+              <source media="(max-width:680px)" srcset="assets/home-hero-1-mobile.webp?v=20260723-5">
+              <source media="(min-width:681px)" srcset="assets/home-hero-1-desktop.webp?v=20260723-5"><img
+                src="assets/home-hero-1-desktop.webp?v=20260723-5" alt="なみ先生と教材を手にしたお子さまたち">
+            </picture>
+          </figure>
+          <figure class="slide" data-caption="講習会や保護者さま向けの特別講座も開催">
+            <picture>
+              <source media="(max-width:680px)" srcset="assets/L.jpg?v=20260724-1">
+              <source media="(min-width:681px)" srcset="assets/L.jpg?v=20260724-1"><img src="assets/L.jpg?v=20260724-1"
+                alt="中学受験・塾選び・志望校選び講座のご案内">
+            </picture>
+          </figure>
+          <figure class="slide" data-caption="目標に向かう気持ちも、|一緒に育てます">
+            <picture>
+              <source media="(max-width:680px)" srcset="assets/TOP03.png?v=20260724-1">
+              <source media="(min-width:681px)" srcset="assets/TOP03.png?v=20260724-1"><img
+                src="assets/TOP03.png?v=20260724-1" alt="なみ先生がお子さまと一緒に学習に取り組む様子">
+            </picture>
+          </figure>
+        </div>
+        <div class="slider-meta container">
+          <p class="slider-caption" data-slider-caption><span class="keep-together">一人ひとりの「できた」を、</span><wbr><span
+              class="keep-together">次の一歩へ</span></p>
+          <div class="slider-dots" aria-label="写真を選択">
+            <button class="slider-dot active" type="button" aria-label="1枚目"></button>
+            <button class="slider-dot" type="button" aria-label="2枚目"></button>
+            <button class="slider-dot" type="button" aria-label="3枚目"></button>
           </div>
         </div>
       </div>
-    </div>
-    <div class="center-actions">
-      <a class="button" href="voices.html">保護者さま・お子さまの体験記をもっと見る</a>
-    </div>
-  </div>
-</section>
-
-<section class="section section-compact" id="faq">
-  <div class="container faq-layout">
-    <div class="section-head"><div class="eyebrow">FAQ</div><h2>よくある質問</h2><p>受講前によくいただくご質問をまとめました。</p></div>
-    <div class="faq-list">
-      <details><summary>発達特性のあるお子さまも受講できますか</summary><div class="faq-answer"><div class="faq-answer-inner"><p>ご相談いただけます。WISC等の検査結果がある場合は、保護者さまの同意のもとで学習計画の参考にします。</p><p class="small-note">イーナは医療・療育機関ではなく、診断や検査結果の医学的な判定は行いません。</p></div></div></details>
-      <details><summary>診断がなくても相談できますか</summary><div class="faq-answer"><div class="faq-answer-inner"><p>診断の有無にかかわらずご相談いただけます。ノート、テスト、学校の先生のコメント、体験授業での様子を参考にします。</p></div></div></details>
-      <details><summary>オンライン授業には何が必要ですか</summary><div class="faq-answer"><div class="faq-answer-inner"><p>安定したWi-Fi環境と、パソコン・タブレット・スマートフォンのいずれかをご用意ください。教材については事前にご相談します。</p></div></div></details>
-      <details><summary>無料振替制度について教えてください</summary><div class="faq-answer"><div class="faq-answer-inner"><p>学校行事や急な体調不良の場合、授業開始2時間前までに保護者さまからご連絡いただければ、対面授業の空きコマまたはオンライン授業へ振り替えます。</p></div></div></details>
-    </div>
-  </div>
-</section>
-
-<section class="section line-section">
-  <div class="container line-cta">
-    <div><div class="eyebrow">OFFICIAL LINE</div><h2>まずはLINEで<br>ご相談ください</h2><p>ノートやテストの写真も送れます。1対1のトークです。</p><div class="line-points"><span class="line-point">24時間受付</span><span class="line-point">個人チャット</span></div><div class="hero-actions"><a class="button line-inverse" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener">LINEで友だち追加</a><span class="small-note">LINE ID：@869srjfq</span></div></div>
-    <div class="line-qr"><img src="assets/line-qr.png?v=20260723-2" alt="個別指導イーナ 公式LINE QRコード"><span class="small-note">スマートフォンで読み取れます</span></div>
-  </div>
-</section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html"><img src="assets/logo-horizontal-footer.svg?v=20260723-2" alt="個別指導イーナ"></a>
-        <p>駒込・笹塚・オンラインで、お子さまに合う学び方を一緒に探します。</p>
+      <div class="hero-title-band">
+        <div class="container">
+          <h1><span class="keep-together">勉強嫌いを変える</span><wbr><span class="keep-together">個別指導</span></h1>
+        </div>
       </div>
-      <div class="footer-contact">
-        <a class="footer-link line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z" fill="currentColor"/><path d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z" fill="#ffffff"/></svg>公式LINE（24時間受付）</a>
-        <a class="footer-link" href="mailto:i.na.yamazakinami.26@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.1 7-5.1V7H5Zm14 10V9.8l-7 5-7-5V17h14Z" fill="currentColor"/></svg>i.na.yamazakinami.26@gmail.com</a>
-        <a class="footer-link footer-link-wrap" href="https://www.instagram.com/school_i_na/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" fill="currentColor"/></svg><span class="footer-link-text">@school_i_na Instagramで最新の情報をお届けしています。</span></a>
-        <a class="footer-link" href="tel:09061806981"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2.8 10 6.2 8.2 9c1.2 2.5 3.3 4.6 5.8 5.8l2.8-1.8 3.4 3.4-1.4 3c-.3.7-1.1 1.1-1.9 1C9.8 19.5 4.5 14.2 3.6 7.1c-.1-.8.3-1.6 1-1.9l2-2.4Z" fill="currentColor"/></svg>090-6180-6981</a>
-        <span class="footer-note">電話受付：平日10:00-17:00。授業中は出られない場合があります。</span>
+      <div class="hero-body-band">
+        <div class="container hero-copy">
+          <p class="lead"><span class="keep-together">「勉強が苦手」じゃなくて、</span><wbr><span
+              class="keep-together">まだ合う学び方に出会っていないだけ。</span><wbr><span
+              class="keep-together">お子さまの理解の仕方に合わせて、</span><wbr><span class="keep-together">対話しながら学習方法を組み立てます。</span>
+          </p>
+          <div class="hero-actions">
+            <a class="button line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path
+                  d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z"
+                  fill="currentColor" />
+                <path
+                  d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z"
+                  fill="#ffffff" />
+              </svg>LINEで無料相談</a>
+            <a class="button" href="#classrooms">教室・オンライン</a>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="section section-gray section-compact">
+      <div class="container split-feature">
+        <div class="media-heading-frame">
+          <div class="section-photo concerns-photo"><img src="assets/home-teacher.webp?v=20260723-6"
+              alt="教室で学習について相談する様子"></div>
+          <div class="section-head media-heading">
+            <div class="eyebrow">CONCERNS</div>
+            <h2>こんな学習の困りごと、<br>ご相談ください</h2>
+          </div>
+        </div>
+        <div>
+          <ul class="concern-list">
+            <li><svg class="list-icon" aria-hidden="true">
+                <use href="#icon-check"></use>
+              </svg><span>集団授業では質問しにくい</span></li>
+            <li><svg class="list-icon" aria-hidden="true">
+                <use href="#icon-check"></use>
+              </svg><span>理解するまでに時間がかかる</span></li>
+            <li><svg class="list-icon" aria-hidden="true">
+                <use href="#icon-check"></use>
+              </svg><span>集中や宿題の進め方に困っている</span></li>
+            <li><svg class="list-icon" aria-hidden="true">
+                <use href="#icon-check"></use>
+              </svg><span>通塾せず、自宅から学びたい</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-compact" id="features">
+      <div class="container">
+        <div class="section-head centered">
+          <div class="eyebrow">PERSONAL LEARNING</div>
+          <h2>合う学び方を、<br>一緒につくる</h2>
+          <p>一律の進め方ではなく、お子さまの反応を確かめながら授業を調整します。</p>
+        </div>
+        <div class="feature-list">
+          <article class="feature-item">
+            <div class="feature-image online-image"><img src="assets/home-feature-conversation.webp?v=20260723-2"
+                alt="教室でお子さまと対話しながら指導するなみ先生"></div>
+            <div class="feature-copy">
+              <div class="number">POINT 1</div>
+              <h3>対話で理解を確かめる</h3>
+              <p>会話と手元を見ながら理解度を確認し、分からない部分は説明方法を変えて進めます。</p>
+            </div>
+          </article>
+          <article class="feature-item reverse">
+            <div class="feature-image"><img src="assets/home-feature-plan.webp?v=20260723-6"
+                alt="教室でお子さまの教材を確認しながら指導するなみ先生"></div>
+            <div class="feature-copy">
+              <div class="number">POINT 2</div>
+              <h3>その日に合わせて組み立てる</h3>
+              <p>教材の難易度、予習と復習の配分、進度、宿題量を、お子さまの様子に合わせて調整します。</p>
+            </div>
+          </article>
+          <article class="feature-item">
+            <div class="feature-image report-image"><img src="assets/home-feature-report.webp?v=20260723-5"
+                alt="授業内容と理解度を記録した授業報告書"></div>
+            <div class="feature-copy">
+              <div class="number">POINT 3</div>
+              <h3>授業のあとまで共有する</h3>
+              <p>毎回の授業内容、理解度、次の課題を授業報告書で保護者さまへ共有します。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gray section-compact" id="classrooms">
+      <div class="container classroom-layout">
+        <div class="media-heading-frame">
+          <div class="classroom-photo"><img src="assets/home-feature-dialogue.webp?v=20260723-5"
+              alt="オンライン授業でホワイトボードを使って説明するなみ先生"></div>
+          <div class="section-head media-heading">
+            <div class="eyebrow">CLASSROOMS</div>
+            <h2>通いやすい形で<br>続けられます</h2>
+            <p>対面授業とオンライン授業から、ご家庭に合う形を選べます。</p>
+          </div>
+        </div>
+        <div>
+          <div class="location-list">
+            <article class="location-panel"><svg class="panel-icon" aria-hidden="true">
+                <use href="#icon-school"></use>
+              </svg>
+              <div>
+                <h3>駒込hahaco校</h3>
+                <p>教室で受講する対面授業です。</p>
+                <div class="schedule-days" aria-label="開講曜日"><span class="schedule-day">火</span><span
+                    class="schedule-day">木</span></div><a class="map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AB%E3%83%95%E3%82%A7hahaco%20%E9%A7%92%E8%BE%BC"
+                  target="_blank" rel="noopener"><svg aria-hidden="true">
+                    <use href="#icon-map"></use>
+                  </svg>Google Map</a>
+              </div>
+            </article>
+            <article class="location-panel"><svg class="panel-icon" aria-hidden="true">
+                <use href="#icon-lecture"></use>
+              </svg>
+              <div>
+                <h3>笹塚校</h3>
+                <p>学校の休業期間を中心に、講習会対面授業を行います。</p>
+                <div class="schedule-days" aria-label="開講形態"><span class="schedule-day wide">講習会</span></div><a
+                  class="map-link"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%95%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B9%E3%83%91%E3%83%AC%E3%82%B9%E7%AC%B9%E5%A1%9A"
+                  target="_blank" rel="noopener"><svg aria-hidden="true">
+                    <use href="#icon-map"></use>
+                  </svg>Google Map</a>
+              </div>
+            </article>
+            <article class="location-panel"><svg class="panel-icon" aria-hidden="true">
+                <use href="#icon-monitor"></use>
+              </svg>
+              <div>
+                <h3>オンライン校</h3>
+                <p>自宅から受講できます。</p>
+                <div class="schedule-days" aria-label="開講曜日"><span class="schedule-day">月</span><span
+                    class="schedule-day">水</span><span class="schedule-day">金</span><span
+                    class="schedule-day">土</span><span class="schedule-day">日</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-compact">
+      <div class="container service-layout">
+        <div class="section-head">
+          <div class="eyebrow">SERVICES</div>
+          <h2>授業と家庭学習を<br>つなぐ基本サービス</h2>
+          <p>授業だけで終わらず、日々の学習と保護者さまへの共有まで支えます。</p>
+        </div>
+        <div class="service-list">
+          <article class="service-item"><svg class="service-icon" aria-hidden="true">
+              <use href="#icon-book"></use>
+            </svg>
+            <div>
+              <h3><span class="keep-together">オーダーメイド</span><wbr><span class="keep-together">カリキュラム</span></h3>
+              <p>目標と理解度に合わせて、教材や進度を調整します。</p>
+            </div>
+          </article>
+          <article class="service-item"><svg class="service-icon" aria-hidden="true">
+              <use href="#icon-file"></use>
+            </svg>
+            <div>
+              <h3>授業報告書</h3>
+              <p>授業内容、理解度、次の課題を毎回共有します。</p>
+            </div>
+          </article>
+          <article class="service-item"><svg class="service-icon" aria-hidden="true">
+              <use href="#icon-home"></use>
+            </svg>
+            <div>
+              <h3>家庭学習サポート</h3>
+              <p>宿題の量と内容を相談し、無理のない形で日割りにします。</p>
+            </div>
+          </article>
+          <article class="service-item"><svg class="service-icon" aria-hidden="true">
+              <use href="#icon-users"></use>
+            </svg>
+            <div>
+              <h3>保護者面談（無料）</h3>
+              <p>最低年3回、対面・オンライン・電話・LINEで行います。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gray section-compact">
+      <div class="container">
+        <div class="media-heading-frame consultation-visual">
+          <div class="consultation-photo"><img src="assets/home-consultation.png?v=20260723-1" alt="教室で保護者さま向け講座を行う様子">
+          </div>
+          <div class="section-head media-heading">
+            <div class="eyebrow">CONSULTATION</div>
+            <h2>相談・体験から<br>始められます</h2>
+            <p>まずはLINEで、現在のお困りごとをお聞かせください。</p>
+          </div>
+        </div>
+        <div class="consultation-grid">
+          <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true">
+              <use href="#icon-chat"></use>
+            </svg>
+            <h3>無料学習相談</h3>
+            <p class="consult-price"><span class="price-number">0</span><span class="price-unit">円</span></p>
+            <p><span class="keep-together">電話またはLINEで、</span><wbr><span class="keep-together">現在の状況を伺います。</span></p>
+          </article>
+          <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true">
+              <use href="#icon-users"></use>
+            </svg>
+            <h3>有料学習相談</h3>
+            <p class="consult-price"><span class="price-number">3000</span><span class="price-unit">円</span></p>
+            <p><span class="keep-together">対面またはオンラインで、</span><wbr><span class="keep-together">学習の方針を整理します。</span></p>
+          </article>
+          <article class="consultation-item"><svg class="consultation-icon" aria-hidden="true">
+              <use href="#icon-book"></use>
+            </svg>
+            <h3>体験授業</h3>
+            <p class="consult-price"><span class="price-number">4000</span><span class="price-unit">円</span></p>
+            <p><span class="keep-together">実際に授業を行い、</span><wbr><span class="keep-together">今後の学習プランをご提案します。</span></p>
+          </article>
+        </div>
+        <div class="center-actions"><a class="button line" href="https://lin.ee/6t2VMWp" target="_blank"
+            rel="noopener">LINEで相談する</a><a class="button" href="pricing.html">料金の概要を見る</a></div>
+      </div>
+    </section>
+
+    <section class="section section-compact">
+      <div class="container event-layout">
+        <div class="media-heading-frame">
+          <div class="event-photo"><img src="assets/home-support.png?v=20260723-1" alt="保護者さま向け受験講座の開催風景"></div>
+          <div class="section-head media-heading">
+            <div class="eyebrow">SUPPORT</div>
+            <h2>続けやすさと、<br>学びの機会を</h2>
+          </div>
+        </div>
+        <div>
+          <div class="support-list">
+            <article><svg class="list-icon" aria-hidden="true">
+                <use href="#icon-calendar"></use>
+              </svg>
+              <div>
+                <h3>無料振替制度</h3>
+                <p>学校行事や急な体調不良のときは、条件の範囲内で別日に振り替えられます。</p>
+              </div>
+            </article>
+            <article><svg class="list-icon" aria-hidden="true">
+                <use href="#icon-users"></use>
+              </svg>
+              <div>
+                <h3>ご紹介制度</h3>
+                <p>ご紹介者さまとご入会者さま、それぞれに特典をご用意しています。</p>
+              </div>
+            </article>
+            <article><svg class="list-icon" aria-hidden="true">
+                <use href="#icon-book"></use>
+              </svg>
+              <div>
+                <h3>受験講座・アート教室</h3>
+                <p>保護者さま向けの受験情報講座や、お子さま向けのアート教室を行います。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gray section-compact">
+      <div class="container teacher-block">
+        <div class="media-heading-frame">
+          <div class="teacher-photo"><img src="assets/teacher.png?v=20260723-6" alt="教材を手にして笑顔を見せるなみ先生とお子さま"></div>
+          <div class="section-head media-heading">
+            <div class="eyebrow">TEACHER</div>
+            <h2>なみ先生</h2>
+          </div>
+        </div>
+        <div class="teacher-copy">
+          <p class="lead">大手個別学習塾の元教室長。保護者個人面談を多数実施し、中学受験・高校受験を控えるお子さまを中心に、一人ひとりに合う学び方を提案してきました。</p>
+          <p>説明方法や教材を一つに決めつけず、お子さまの「分かる」を積み重ねます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section parent-voice-section">
+      <div class="container">
+        <div class="voice-slider" data-voice-slider aria-label="保護者さまの体験記">
+          <div class="voice-frame">
+            <div class="voice-viewport">
+              <div class="voice-track">
+                <figure class="voice-slide" data-attribution="小2生　保護者　I.Aさま" data-full-image="assets/taiken00.jpg">
+                  <img src="assets/taiken00.jpg" alt="保護者さまから寄せられた手書きの体験記" width="1800" height="1200" loading="lazy"
+                    decoding="async">
+                </figure>
+                <figure class="voice-slide" data-attribution="年長から就学準備、小学1年生から個別指導を受講する保護者さまより">
+                  <img src="assets/parent-review-placeholder-02.svg" alt="保護者さまの体験記2は準備中です" width="1800" height="1200"
+                    loading="lazy" decoding="async">
+                </figure>
+                <figure class="voice-slide" data-attribution="年長から就学準備、小学1年生から個別指導を受講する保護者さまより">
+                  <img src="assets/parent-review-placeholder-03.svg" alt="保護者さまの体験記3は準備中です" width="1800" height="1200"
+                    loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="voice-heading-band">
+                <div class="voice-heading-top">
+                  <div class="eyebrow">VOICES</div>
+                </div>
+                <div class="voice-heading-copy">
+                  <h2>保護者さま・<br>お子さまの体験記</h2>
+                  <p>通ってくださっている<br>保護者さま・お子さまより、<br>イーナまで嬉しいコメントをいただきました！</p>
+                  <p class="voice-attribution" data-voice-attribution>小2生　保護者　I.Aさま</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="center-actions">
+            <a class="button" href="voices.html">保護者さま・お子さまの体験記をもっと見る</a>
+          </div>
+        </div>
+    </section>
+
+    <section class="section section-compact" id="faq">
+      <div class="container faq-layout">
+        <div class="section-head">
+          <div class="eyebrow">FAQ</div>
+          <h2>よくある質問</h2>
+          <p>受講前によくいただくご質問をまとめました。</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>発達特性のあるお子さまも受講できますか</summary>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>ご相談いただけます。WISC等の検査結果がある場合は、保護者さまの同意のもとで学習計画の参考にします。</p>
+                <p class="small-note">イーナは医療・療育機関ではなく、診断や検査結果の医学的な判定は行いません。</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>診断がなくても相談できますか</summary>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>診断の有無にかかわらずご相談いただけます。ノート、テスト、学校の先生のコメント、体験授業での様子を参考にします。</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>オンライン授業には何が必要ですか</summary>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>安定したWi-Fi環境と、パソコン・タブレット・スマートフォンのいずれかをご用意ください。教材については事前にご相談します。</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>無料振替制度について教えてください</summary>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>学校行事や急な体調不良の場合、授業開始2時間前までに保護者さまからご連絡いただければ、対面授業の空きコマまたはオンライン授業へ振り替えます。</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section line-section">
+      <div class="container line-cta">
+        <div>
+          <div class="eyebrow">OFFICIAL LINE</div>
+          <h2>まずはLINEで<br>ご相談ください</h2>
+          <p>ノートやテストの写真も送れます。1対1のトークです。</p>
+          <div class="line-points"><span class="line-point">24時間受付</span><span class="line-point">個人チャット</span></div>
+          <div class="hero-actions"><a class="button line-inverse" href="https://lin.ee/6t2VMWp" target="_blank"
+              rel="noopener">LINEで友だち追加</a><span class="small-note">LINE ID：@869srjfq</span></div>
+        </div>
+        <div class="line-qr"><img src="assets/line-qr.png?v=20260723-2" alt="個別指導イーナ 公式LINE QRコード"><span
+            class="small-note">スマートフォンで読み取れます</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><img src="assets/logo-horizontal-footer.svg?v=20260723-2"
+              alt="個別指導イーナ"></a>
+          <p>駒込・笹塚・オンラインで、お子さまに合う学び方を一緒に探します。</p>
+        </div>
+        <div class="footer-contact">
+          <a class="footer-link line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><svg
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z"
+                fill="currentColor" />
+              <path
+                d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z"
+                fill="#ffffff" />
+            </svg>公式LINE（24時間受付）</a>
+          <a class="footer-link" href="mailto:i.na.yamazakinami.26@gmail.com"><svg viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path d="M3 5h18v14H3V5Zm2 2v.4l7 5.1 7-5.1V7H5Zm14 10V9.8l-7 5-7-5V17h14Z" fill="currentColor" />
+            </svg>i.na.yamazakinami.26@gmail.com</a>
+          <a class="footer-link footer-link-wrap" href="https://www.instagram.com/school_i_na/" target="_blank"
+            rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+                fill="currentColor" />
+            </svg><span class="footer-link-text">@school_i_na Instagramで最新の情報をお届けしています。</span></a>
+          <a class="footer-link" href="tel:09061806981"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.6 2.8 10 6.2 8.2 9c1.2 2.5 3.3 4.6 5.8 5.8l2.8-1.8 3.4 3.4-1.4 3c-.3.7-1.1 1.1-1.9 1C9.8 19.5 4.5 14.2 3.6 7.1c-.1-.8.3-1.6 1-1.9l2-2.4Z"
+                fill="currentColor" />
+            </svg>090-6180-6981</a>
+          <span class="footer-note">電話受付：平日10:00-17:00。授業中は出られない場合があります。</span>
+        </div>
+      </div>
+      <div class="footer-links-bottom" style="margin-top: 24px; text-align: center;">
+        <a href="privacy.html" style="color: inherit; text-decoration: underline; font-size: 14px;">プライバシーポリシー</a>
+      </div>
+      <div class="copyright">© 個別指導イーナ</div>
+      <p class="footer-hashtags">#文京区　#豊島区　#北区　#板橋区<br>#昭和小　#駒込小　#田端小</p>
     </div>
-    <div class="footer-links-bottom" style="margin-top: 24px; text-align: center;">
-      <a href="privacy.html" style="color: inherit; text-decoration: underline; font-size: 14px;">プライバシーポリシー</a>
-    </div>
-    <div class="copyright">© 個別指導イーナ</div>
-    <p class="footer-hashtags">#文京区　#豊島区　#北区　#板橋区<br>#昭和小　#駒込小　#田端小</p>
+  </footer>
+  <div class="mobile-cta" aria-label="LINEとお問い合わせ">
+    <a class="mobile-cta-link line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><span
+        class="mobile-cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z"
+            fill="currentColor" />
+          <path
+            d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z"
+            fill="#ffffff" />
+        </svg><span class="mobile-cta-label">LINE</span></span></a>
+    <a class="mobile-cta-link" href="contact.html#mail-form"><span class="mobile-cta-icon"><svg viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path d="M3 5h18v14H3V5Zm2 2v.4l7 5.1 7-5.1V7H5Zm14 10V9.8l-7 5-7-5V17h14Z" fill="currentColor" />
+        </svg><span class="mobile-cta-label">お問い<br>合わせ</span></span></a>
   </div>
-</footer>
-<div class="mobile-cta" aria-label="LINEとお問い合わせ">
-  <a class="mobile-cta-link line" href="https://lin.ee/6t2VMWp" target="_blank" rel="noopener"><span class="mobile-cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 10.3c0-4.1-4.1-7.4-9.2-7.4S2 6.2 2 10.3c0 3.7 3.3 6.8 7.8 7.3.3.1.7.3.8.6l.2 1.5c.1.4.5.6.8.4 1.8-1 4.6-2.8 6.2-4.8 1.2-1.4 1.8-3 1.8-4.9Z" fill="currentColor"/><path d="M6.4 8.5v3.8h2.2v-.8H7.3v-3H6.4Zm3 0v3.8h.9V8.5h-.9Zm1.8 0v3.8h.9v-2.2l1.7 2.2h.8V8.5h-.9v2.2L12 8.5h-.8Zm4.3 0v3.8h2.4v-.8h-1.5v-.7h1.4V10h-1.4v-.7h1.5v-.8h-2.4Z" fill="#ffffff"/></svg><span class="mobile-cta-label">LINE</span></span></a>
-  <a class="mobile-cta-link" href="contact.html#mail-form"><span class="mobile-cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.1 7-5.1V7H5Zm14 10V9.8l-7 5-7-5V17h14Z" fill="currentColor"/></svg><span class="mobile-cta-label">お問い<br>合わせ</span></span></a>
-</div>
-<script src="script.js?v=20260724-2"></script>
+  <script src="script.js?v=20260724-2"></script>
 </body>
+
 </html>
