@@ -368,6 +368,31 @@ textarea{min-height:150px;resize:vertical}
   h2{font-size:var(--section-heading)}
 }
 
+/* プライバシーポリシー */
+.privacy-consent-wrapper {
+  margin-top: 10px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.privacy-consent {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-size);
+  cursor: pointer;
+  text-align: left;
+}
+.privacy-consent input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+.privacy-consent a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
 @media(max-width:680px){
   :root{--section-heading:30px;--page-heading:36px}
   .container{width:min(calc(100% - 28px),var(--max))}
