@@ -57,7 +57,7 @@
 ## 連絡先
 - LINE URL: https://lin.ee/6t2VMWp
 - LINE ID: @869srjfq
-- メール: i.na.yamazakinami.26@gmail.com
+- メール: nagigue73@gmail.com
 - 電話: 09061806981
 - 電話受付: 平日10:00〜17:00
 
