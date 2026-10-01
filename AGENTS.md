@@ -58,8 +58,6 @@
 - LINE URL: https://lin.ee/6t2VMWp
 - LINE ID: @869srjfq
 - メール: nagigue73@gmail.com
-- 電話: 09061806981
-- 電話受付: 平日10:00〜17:00
 
 ## 作業ルール
 - 修正前に対象ファイルを確認する

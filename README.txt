@@ -24,4 +24,3 @@
 - LINE: https://lin.ee/6t2VMWp
 - LINE ID: @869srjfq
 - Email: nagigue73@gmail.com
-- Phone: 090-6180-6981
